@@ -1,0 +1,163 @@
+.planta-secao {
+  padding: 40px 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.planta-secao h2 {
+  color: #4a3b32;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.subtitulo {
+  text-align: center;
+  color: #666;
+  margin-bottom: 35px;
+}
+
+.planta-flex-container {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.planta-visual {
+  flex: 1.4;
+}
+
+.mapa-container {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.imagem-planta-base {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Ajuste do Grid para comportar os 12 ambientes */
+.botoes-salas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas no desktop */
+  gap: 10px;
+}
+
+.btn-sala {
+  padding: 10px 8px;
+  background-color: #fff;
+  border: 1px solid #bc9c82;
+  color: #4a3b32;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease-index;
+}
+
+.btn-sala:hover {
+  background-color: #fdf8f5;
+}
+
+.btn-sala.ativo {
+  background-color: #bc9c82;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(188, 156, 130, 0.25);
+}
+
+/* Card Informativo */
+.planta-descricao-card {
+  flex: 0.9;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  border: 1px solid #eadecf;
+  position: sticky;
+  top: 20px; /* Faz o card rolar junto com a tela no desktop */
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-header h3 {
+  margin: 0;
+  color: #4a3b32;
+  font-size: 1.4rem;
+  text-align: left;
+}
+
+.badge-tamanho {
+  background-color: #f5eae1;
+  color: #4a3b32;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.planta-descricao-card hr {
+  border: 0;
+  border-top: 1px solid #f1eae4;
+  margin: 15px 0;
+}
+
+.texto-descricao, .texto-detalhes {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.observacoes-fixas {
+  margin-top: 30px;
+  background-color: #faf8f6;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 4px solid #bc9c82;
+}
+
+.observacoes-fixas h4 {
+  margin: 0 0 8px 0;
+  color: #4a3b32;
+  font-size: 0.95rem;
+}
+
+.observacoes-fixas ul {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.observacoes-fixas li {
+  margin-bottom: 5px;
+}
+
+/* Responsividade Celular */
+@media (max-width: 900px) {
+  .planta-flex-container {
+    flex-direction: column;
+  }
+  .botoes-salas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .planta-descricao-card {
+    position: static;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 500px) {
+  .botoes-salas-grid {
+    grid-template-columns: 1fr;
+  }
+}
