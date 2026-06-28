@@ -1,57 +1,109 @@
-import Header from "../componentes/Header"
+import Header from "../componentes/Header";
+import "./Home.css"; // Arquivo de estilização que criaremos abaixo
+import logoImg from "../assets/logo.jpeg";
+import fundoImg from "../assets/fundo.jpeg";
+import Footer from "../componentes/Footer";
 
-export default function Home () {
-    return (
-        
-        <div>
-        <Header />  
 
+
+export default function Home() {
+  return (
+    <div className="home-container">
+      <Header />
+
+      {/* SEÇÃO HERO COM IMAGEM DE FUNDO DINÂMICA */}
+      <section 
+        className="home-hero" 
+        style={{ backgroundImage: `url(${fundoImg})` }}
+      >
+        {/* Camada escurecedora / suavizadora para dar leitura ao texto */}
+        <div className="hero-overlay"></div>
+
+        <div className="hero-content">
+          <div className="hero-logo-wrapper">
+            <img src={logoImg} alt="Logo Essência Viva Oficial" className="hero-logo-img" />
+          </div>
+          <div className="hero-badge">Estética Oncológica Humanizada</div>
           <h2>Essência Viva</h2>
-          <p>Bem-estar oncológico </p>
-
-          <h3>Sobre a Essência Viva</h3>
-          <ul>
-          <p><strong>Estamos focados em:</strong></p>
-          <li>Recuperação da autoestima</li>
-          <li>Bem-estar físico e emocional</li>
-          <li>Humanização do cuidado </li>
-          <li>Diferencial: atendimento individualizado e sensível ao contexto oncológico</li>
-
-          </ul>
-
-          <p>Nossa missão: Promover bem-estar e autoestima a pacientes oncológicos através de cuidados estéticos humanizados. </p>
-          <p>Nossa Visão: Ser referência em estética oncológica humanizada.</p>
-          <p>Nossos Valores: Empatia, ética, segurança, humanização e respeito à individualidade.</p>
-
-          <h3>Sobre nosso Nome</h3>
-          <p> O Nome: “Essência Viva” 
-            representa a ideia de que, 
-            independentemente das mudanças físicas, 
-            emocionais ou estéticas vividas durante o 
-            processo de adoecimento, a essência de cada 
-            pessoa continua viva. </p>
-
-            <h3>Essência Viva</h3>
-            <p>Relação: Embora os cuidados estéticos não atuem diretamente na cura do câncer, eles 
-            contribuem para a reabilitação física e emocional do paciente oncológico. A melhora da 
-            autoestima, do bem-estar psicológico e da qualidade de vida pode favorecer a adesão ao 
-            tratamento, reduzir sintomas emocionais como ansiedade e depressão e fortalecer o 
-            enfrentamento da doença, colaborando indiretamente para melhores resultados terapêuticos.</p>
-
-
-            <h3>Nosso Diferêncial</h3>
-            <p>Atendimento feito por equipe multiprofissional especializada em oncologia e estética 
-                Estudo de casos semanais entre equipe multidisciplinar, incluindo enfermeiros, 
-                para avaliar melhores condutas de manejo individual para cada paciente. 
-                Ambiente acolhedor e não hospitalar 
-                Protocolos seguros para pacientes imunossuprimidos 
-                Parcerias com: 
-                Clínicas oncológicas 
-                Hospitais 
-                Parceria com hospitais e clínicas oncológicas permitem a venda dos 
-                pacotes durante o tratamento do paciente, mediante participação ativa da equipe na 
-                identificação de pacientes elegíveis e no encaminhamento, ONGs de apoio ao câncer e Salões de beleza.</p>
-                
+          <p className="hero-subtitulo">Bem-estar oncológico e reabilitação integrativa</p>
         </div>
-    )
+      </section>
+
+      {/* SEÇÃO MISSÃO, VISÃO, VALORES */}
+      <section className="home-mvs">
+        <div className="mvs-card">
+          <h3>Nossa Missão</h3>
+          <p>Promover bem-estar e autoestima a pacientes oncológicos através de cuidados estéticos humanizados.</p>
+        </div>
+        <div className="mvs-card">
+          <h3>Nossa Visão</h3>
+          <p>Ser referência nacional em suporte e estética oncológica de forma integrada e humanizada.</p>
+        </div>
+        <div className="mvs-card">
+          <h3>Nossos Valores</h3>
+          <p>Empatia, ética, segurança rigorosa, humanização profunda e respeito absoluto à individualidade.</p>
+        </div>
+      </section>
+
+      {/* SEÇÃO SOBRE A ESSÊNCIA VIVA */}
+      <section className="home-sobre">
+        <div className="sobre-grid">
+          <div className="sobre-bloco">
+            <h3>Sobre a Essência Viva</h3>
+            <p><strong>Estamos focados em:</strong></p>
+            <ul className="foco-lista">
+              <li>Recuperação da autoestima</li>
+              <li>Bem-estar físico e emocional</li>
+              <li>Humanização do cuidado</li>
+              <li>Atendimento individualizado e sensível ao contexto oncológico</li>
+            </ul>
+          </div>
+
+          <div className="sobre-bloco destaque">
+            <h3>Sobre nosso Nome</h3>
+            <p>
+              O Nome <strong>“Essência Viva”</strong> representa a ideia de que, 
+              independentemente das mudanças físicas, emocionais ou estéticas vividas durante o 
+              processo de adoecimento, a essência e a força de cada pessoa continuam vivas e intocadas.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* SEÇÃO CONTEXTO CIENTÍFICO / RELAÇÃO COM A CURA */}
+      <section className="home-contexto">
+        <div className="contexto-wrapper">
+          <h3>O Cuidado Além do Tratamento</h3>
+          <p>
+            Embora os cuidados estéticos não atuem diretamente na cura do câncer, eles 
+            contribuem diretamente para a reabilitação física e emocional do paciente oncológico. A melhora da 
+            autoestima e do bem-estar psicológico favorecem a adesão ao 
+            tratamento, reduzem sintomas emocionais como ansiedade e depressão, fortalecendo o 
+            enfrentamento da doença e colaborando de forma integrativa para melhores resultados terapêuticos.
+          </p>
+        </div>
+      </section>
+
+      {/* SEÇÃO NOSSO DIFERENCIAL */}
+      <section className="home-diferenciais">
+        <h3>Nosso Diferencial</h3>
+        <div className="diferenciais-grid">
+          <div className="diferencial-item">
+            <h4>Equipe Multiprofissional</h4>
+            <p>Atendimento feito por profissionais altamente especializados em oncologia e estética. Discussões de caso semanais incluindo enfermeiros para condutas personalizadas.</p>
+          </div>
+          <div className="diferencial-item">
+            <h4>Ambiente Seguro</h4>
+            <p>Protocolos de biossegurança estritos validados para pacientes imunossuprimidos, inseridos em um ambiente acolhedor, calmo e totalmente não hospitalar.</p>
+          </div>
+          <div className="diferencial-item">
+            <h4>Rede de Parcerias</h4>
+            <p>Colaboração ativa com hospitais, clínicas oncológicas, ONGs de apoio e salões de beleza, permitindo o acompanhamento seguro durante todas as fases do tratamento.</p>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
 }

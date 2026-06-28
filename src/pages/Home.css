@@ -1,0 +1,244 @@
+/* Configurações Globais do Layout */
+.home-container {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #3d4a41; /* Verde-cinza bem escuro para facilitar a leitura */
+  background-color: #faf8f5; /* Off-white acolhedor */
+  line-height: 1.7;
+}
+
+/* Títulos Globais */
+.home-container h2, .home-container h3, .home-container h4 {
+  font-weight: 600;
+  color: #2c3e35; /* Verde floresta fechado e elegante */
+}
+
+/* Seções */
+.home-container section {
+  padding: 80px 20px;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* Estilização da Logo na Seção Inicial */
+.hero-logo-wrapper {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  margin-top: 0px; /* Levanta a logo para sobrepor levemente a seção hero */
+}
+
+.hero-logo-img {
+  max-width: 230px;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid #ffffff; /* Bordinha branca para destacar a logo da foto */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* ---- 1. HERO SECTION ---- */
+.home-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+  /* Força o bloco a ocupar toda a largura do monitor */
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
+
+  /* Deixamos a altura livre para ser definida pelo tamanho dos seus textos */
+  height: auto !important;
+  min-height: 85vh; /* Altura mínima para garantir um bom visual inicial */
+  
+  /* Espaçamento interno para os textos não colarem nas bordas da foto */
+  padding: 60px 20px !important; 
+  box-sizing: border-box;
+
+  /* AJUSTE DO FUNDO: Força a imagem a esticar e acompanhar o tamanho do texto sem cortar */
+  background-size: 100% 100% !important; 
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Garante que a camada de sombra também cubra as pontas da tela */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(44, 62, 53, 0.7), rgba(20, 20, 20, 0.65));
+  z-index: 1;
+}
+
+/* Centraliza os textos e a logo no meio perfeito */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.hero-badge {
+  background-color: rgba(234, 222, 207, 0.25); /* Badge semi-transparente */
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(4px); /* Efeito de vidro fosco moderno */
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.home-hero h2 {
+  font-size: 3rem;
+  color: #ffffff; /* Texto branco destaca no fundo escurecido */
+  margin-bottom: 15px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitulo {
+  font-size: 1.3rem;
+  color: #f3ede4; /* Um tom creme bem suave para o subtítulo */
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+/* ---- 2. MISSÃO, VISÃO E VALORES ---- */
+.home-mvs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  padding-top: 20px !important;
+}
+
+.mvs-card {
+  background-color: #ffffff;
+  padding: 35px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(74, 92, 82, 0.04);
+  border: 1px solid #eeebe5;
+  transition: transform 0.3s ease;
+}
+
+.mvs-card:hover {
+  transform: translateY(-5px);
+}
+
+.mvs-card h3 {
+  font-size: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #dfd5c6;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* ---- 3. SEÇÃO SOBRE (GRID EQUILIBRADO) ---- */
+.home-sobre {
+  background-color: #ffffff;
+  max-width: 100% !important;
+  border-y: 1px solid #eeebe5;
+}
+
+.sobre-grid {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 50px;
+}
+
+.foco-lista {
+  padding-left: 20px;
+}
+
+.foco-lista li {
+  margin-bottom: 10px;
+  position: relative;
+  list-style-type: none;
+}
+
+/* Marcador personalizado discreto */
+.foco-lista li::before {
+  content: "•";
+  color: #bc9c82;
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em;
+}
+
+.sobre-bloco.destaque {
+  background-color: #f6f2eb;
+  padding: 35px;
+  border-radius: 16px;
+  border-left: 5px solid #bc9c82; /* Detalhe bronze/dourado */
+}
+
+/* ---- 4. CONTEXTO CIENTÍFICO ---- */
+.contexto-wrapper {
+  background-color: #3b4d43; /* Fundo escuro imponente e elegante */
+  color: #f4f0ea;
+  padding: 50px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(44, 62, 53, 0.15);
+}
+
+.contexto-wrapper h3 {
+  color: #eadecf;
+  margin-top: 0;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* ---- 5. DIFERENCIAIS GRID ---- */
+.home-diferenciais h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.diferenciais-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.diferencial-item {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  border-top: 4px solid #5c6e63;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.02);
+}
+
+.diferencial-item h4 {
+  margin-top: 0;
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+}
+
+/* ---- RESPONSIVIDADE PARA CELULAR ---- */
+@media (max-width: 768px) {
+  .home-container section {
+    padding: 50px 20px;
+  }
+  
+  .home-hero h2 {
+    font-size: 2.2rem;
+  }
+  
+  .sobre-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contexto-wrapper {
+    padding: 30px 20px;
+  }
+}

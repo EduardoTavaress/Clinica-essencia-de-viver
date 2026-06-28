@@ -1,30 +1,55 @@
+/* ==========================================================================
+   ESTRUTURA PRINCIPAL (CORREÇÃO DO FLUXO E HEADER/FOOTER)
+   ========================================================================== */
 .planta-secao {
-  padding: 40px 20px;
-  max-width: 1300px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #faf8f6; /* Fundo suave combinando com seu estilo */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  
+  /* Garante que o Header e o Footer se estendam por toda a tela */
+  align-items: stretch !important;
+  justify-content: flex-start !important;
 }
 
+/* ==========================================================================
+   CONTEÚDO DA PÁGINA (LIMITADO E CENTRALIZADO CORRETAMENTE)
+   ========================================================================== */
 .planta-secao h2 {
   color: #4a3b32;
   font-weight: 300;
   text-align: center;
-  margin-bottom: 5px;
+  margin: 40px 20px 5px 20px;
+  font-size: 2.2rem;
 }
 
 .subtitulo {
   text-align: center;
   color: #666;
-  margin-bottom: 35px;
+  margin: 0 20px 35px 20px;
 }
 
+/* Embrulho do conteúdo para não esmagar o Header/Footer */
 .planta-flex-container {
   display: flex;
   gap: 30px;
   align-items: flex-start;
+  max-width: 1300px; /* Seu limite original */
+  width: 100%;
+  margin: 0 auto 60px auto; /* Centraliza apenas o miolo da página */
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
+/* ==========================================================================
+   LADO ESQUERDO: MAPA E BOTÕES
+   ========================================================================== */
 .planta-visual {
   flex: 1.4;
+  min-width: 0; /* Previne bugs de transbordo do Flexbox */
 }
 
 .mapa-container {
@@ -34,19 +59,21 @@
 
 .imagem-planta-base {
   width: 100%;
+  height: auto;
+  display: block;
   border-radius: 14px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
-/* Ajuste do Grid para comportar os 12 ambientes */
+/* Grid de Botões */
 .botoes-salas-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colunas no desktop */
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
 
 .btn-sala {
-  padding: 10px 8px;
+  padding: 12px 8px;
   background-color: #fff;
   border: 1px solid #bc9c82;
   color: #4a3b32;
@@ -54,20 +81,25 @@
   cursor: pointer;
   font-size: 0.9rem;
   font-weight: 500;
-  transition: all 0.2s ease-index;
+  transition: all 0.2s ease; /* Corrigido de ease-index para ease */
+  text-align: center;
 }
 
 .btn-sala:hover {
   background-color: #fdf8f5;
+  border-color: #4a3b32;
 }
 
 .btn-sala.ativo {
   background-color: #bc9c82;
   color: #fff;
   box-shadow: 0 4px 12px rgba(188, 156, 130, 0.25);
+  border-color: #bc9c82;
 }
 
-/* Card Informativo */
+/* ==========================================================================
+   LADO DIREITO: CARD INFORMATIVO
+   ========================================================================== */
 .planta-descricao-card {
   flex: 0.9;
   background-color: #fff;
@@ -76,14 +108,15 @@
   box-shadow: 0 10px 30px rgba(0,0,0,0.04);
   border: 1px solid #eadecf;
   position: sticky;
-  top: 20px; /* Faz o card rolar junto com a tela no desktop */
+  top: 40px; /* Ajustado para dar um respiro caso o header seja fixo */
+  box-sizing: border-box;
 }
 
 .card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
 
 .card-header h3 {
@@ -114,8 +147,10 @@
   line-height: 1.6;
   color: #444;
   margin-bottom: 15px;
+  text-align: left; /* Garante alinhamento textual correto */
 }
 
+/* Caixa de Observações Técnicas */
 .observacoes-fixas {
   margin-top: 30px;
   background-color: #faf8f6;
@@ -128,6 +163,7 @@
   margin: 0 0 8px 0;
   color: #4a3b32;
   font-size: 0.95rem;
+  text-align: left;
 }
 
 .observacoes-fixas ul {
@@ -135,29 +171,41 @@
   padding-left: 20px;
   font-size: 0.85rem;
   color: #666;
+  text-align: left;
 }
 
 .observacoes-fixas li {
   margin-bottom: 5px;
 }
 
-/* Responsividade Celular */
-@media (max-width: 900px) {
+/* ==========================================================================
+   RESPONSIVIDADE
+   ========================================================================== */
+@media (max-width: 950px) {
   .planta-flex-container {
     flex-direction: column;
   }
+  
+  .planta-visual, .planta-descricao-card {
+    width: 100%;
+    flex: none;
+  }
+  
   .botoes-salas-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  
   .planta-descricao-card {
-    position: static;
-    width: 100%;
-    box-sizing: border-box;
+    position: static; /* Desativa o sticky no celular */
   }
 }
 
 @media (max-width: 500px) {
   .botoes-salas-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .planta-secao h2 {
+    font-size: 1.7rem;
   }
 }

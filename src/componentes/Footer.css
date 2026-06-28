@@ -1,0 +1,156 @@
+
+/* Container Principal do Footer */
+.site-footer {
+  background-color: #2c3e35; /* Verde Escuro da marca */
+  color: #ffffff;
+  padding: 50px 20px 20px 20px;
+  font-family: sans-serif;
+  margin-top: 60px;
+}
+
+/* Alinhamento das colunas em Grid Responsivo */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  border-bottom: 1px solid rgba(188, 156, 130, 0.2); /* Linha divisória bronze sutil */
+  padding-bottom: 30px;
+}
+
+/* Configuração interna de cada coluna */
+.footer-col h4 {
+  color: #bc9c82; /* Tom Bronze nos subtítulos */
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.footer-logo {
+  color: #bc9c82;
+  font-size: 1.6rem;
+  margin: 0 0 15px 0;
+  font-weight: 700;
+}
+
+.footer-descricao {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #e0eae4;
+}
+
+/* Listas de links e horários */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #e0eae4;
+}
+
+.footer-col.links ul li a {
+  color: #e0eae4;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* Efeito de passar o mouse nos links */
+.footer-col.links ul li a:hover {
+  color: #bc9c82; /* Transiciona para bronze */
+}
+
+.footer-col p {
+  font-size: 0.9rem;
+  margin: 10px 0;
+  color: #e0eae4;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Container do ícone social */
+.footer-redes {
+  margin-top: 15px;
+  display: flex;
+  gap: 12px;
+}
+
+.rede-icon {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+  transition: fill 0.2s ease, transform 0.2s ease;
+}
+
+.rede-icon:hover {
+  fill: #bc9c82;
+  transform: scale(1.1);
+}
+
+/* Seção inferior de créditos */
+.footer-direitos {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: rgba(224, 234, 228, 0.6);
+}
+
+/* Container que organiza a área de redes */
+.footer-redes {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column; /* Organiza em blocos caso adicione mais redes depois */
+  gap: 12px;
+}
+
+/* Link flexível para alinhar o ícone e o texto lado a lado */
+.rede-social-link {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Distância entre o logo do Instagram e o texto @ */
+  text-decoration: none;
+  color: #e0eae4;
+  transition: color 0.2s ease;
+}
+
+/* Configuração do desenho do ícone */
+.rede-icon {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+  transition: fill 0.2s ease, transform 0.2s ease;
+}
+
+/* Configuração do texto do Instagram */
+.rede-username {
+  font-size: 0.9rem;
+}
+
+/* Efeito Hover integrado (Muda a cor do texto e do ícone juntos) */
+.rede-social-link:hover .rede-icon {
+  fill: #bc9c82; /* Transiciona o ícone para bronze */
+  transform: scale(1.05);
+}
+
+.rede-social-link:hover {
+  color: #bc9c82; /* Transiciona o texto para bronze */
+}
+
+.site-footer {
+  background-color: #2c3e35;
+  color: #ffffff;
+  padding: 50px 20px 20px 20px;
+  font-family: sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+
+  /* --- AS DUAS LINHAS ATRÁS DA SOLUÇÃO --- */
+  box-shadow: 0 50vh 0 50vh #2c3e35; /* Cria uma "sombra" sólida verde gigante para baixo */
+  position: relative;
+}

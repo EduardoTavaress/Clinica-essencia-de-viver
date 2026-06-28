@@ -1,0 +1,63 @@
+import React from 'react';
+import './Footer.css';
+
+export default function Footer() {
+  return (
+    <footer className="site-footer">
+      <div className="footer-container">
+        
+        {/* COLUNA 1: SOBRE E LOGO */}
+        <div className="footer-col sobre">
+          <h3 className="footer-logo">Essência Viva</h3>
+          <p className="footer-descricao">
+            Bem-estar oncológico e reabilitação integrativa. Cuidados especializados em enfermagem estética voltada para pacientes oncológicos.
+          </p>
+        </div>
+
+        {/* COLUNA 2: NAVEGAÇÃO INTERNA */}
+        <div className="footer-col links">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#pacotes">Pacotes</a></li>
+            <li><a href="#cronograma">Cronograma</a></li>
+          </ul>
+        </div>
+
+        {/* COLUNA 3: HORÁRIOS DE ATENDIMENTO */}
+        <div className="footer-col horarios">
+          <h4>Atendimento</h4>
+          <ul>
+            <li>Segunda a Sexta: 08h às 18h</li>
+            <li>Sábado: 08h às 12h</li>
+            <li>Domingo: Fechado</li>
+          </ul>
+        </div>
+
+        {/* COLUNA 4: CONTATO E REDES SOCIAIS */}
+        <div className="footer-col contato">
+          <h4>Contato</h4>
+          <p><span>📍</span> Marituba - PA</p>
+          <p><span>📞</span> (91) 99999-9999</p>
+          
+          {/* Ícones de Redes Sociais */}
+          <div className="footer-redes">
+  <a href="https://instagram.com" target="_blank" rel="noreferrer" className="rede-social-link" aria-label="Instagram">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="rede-icon">
+      <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.3 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM402.4 377.3c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+    </svg>
+    <span className="rede-username">@essencia.viva</span>
+  </a>
+</div>
+        </div>
+
+      </div>
+
+      {/* BARRA DE DIREITOS AUTORAIS */}
+      <div className="footer-direitos">
+        <p>&copy; {new Date().getFullYear()} Essência Viva. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+  );
+}

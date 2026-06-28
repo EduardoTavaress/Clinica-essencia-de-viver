@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './PlantaLocal.css';
 import imagemPlanta from '../assets/planta.jpeg'; // Certifique-se de salvar a imagem com este nome em assets
+import Header from "../componentes/Header"
+import Footer from '../componentes/Footer';
+
 
 export default function PlantaLocal() {
   // Dados extraídos fielmente da sua planta baixa e tabela
@@ -83,6 +86,9 @@ export default function PlantaLocal() {
 
   return (
     <div className="planta-secao">
+
+      <Header />
+
       <h2>Conheça Nossa Estrutura Integrativa</h2>
       <p className="subtitulo">Explore a distribuição dos nossos 608 m² clicando nos setores abaixo.</p>
 
@@ -131,6 +137,8 @@ export default function PlantaLocal() {
         </div>
 
       </div>
+
+      <Footer />
     </div>
   );
 }
