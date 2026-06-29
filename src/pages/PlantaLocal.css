@@ -1,14 +1,30 @@
 /* ==========================================================================
+   VARIÁVEIS DE COR (BASEADAS NA LOGO ESSÊNCIA VIVA)
+   ========================================================================== */
+:root {
+  --cor-fundo: #FBF9F6;            /* Creme suave e acolhedor */
+  --cor-texto-escuro: #581C20;     /* O Vinho profundo e elegante da logo */
+  --cor-texto-corpo: #4A3E3F;      /* Grafite quente para leitura confortável */
+  --cor-detalhes: #C39399;         /* Rosa Chá / Mauve para marcadores, bordas e badges */
+  --cor-destaque-bloco: #F5EDED;   /* Tom sutil para fundos de blocos destacados */
+  --cor-card-fundo: #FFFFFF;       /* Branco puro para destacar os cards */
+  --cor-elemento-clinico: #3D5A46; /* Verde Oliva clínico para equilíbrio de saúde e vida */
+  --cor-clinico-hover: #2B4032;    /* Verde oliva mais escuro para estados de hover */
+  --cor-vinho-hover: #3F1417;      /* Vinho mais escuro para estados de hover */
+}
+
+/* ==========================================================================
    ESTRUTURA PRINCIPAL (CORREÇÃO DO FLUXO E HEADER/FOOTER)
    ========================================================================== */
 .planta-secao {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #faf8f6; /* Fundo suave combinando com seu estilo */
+  background-color: var(--cor-fundo); /* Fundo creme suave oficial */
   margin: 0;
   padding: 0;
   width: 100%;
+  font-family: 'Segoe UI', system-ui, sans-serif;
   
   /* Garante que o Header e o Footer se estendam por toda a tela */
   align-items: stretch !important;
@@ -19,8 +35,8 @@
    CONTEÚDO DA PÁGINA (LIMITADO E CENTRALIZADO CORRETAMENTE)
    ========================================================================== */
 .planta-secao h2 {
-  color: #4a3b32;
-  font-weight: 300;
+  color: var(--cor-texto-escuro); /* Vinho profundo no título principal */
+  font-weight: 600;
   text-align: center;
   margin: 40px 20px 5px 20px;
   font-size: 2.2rem;
@@ -28,7 +44,7 @@
 
 .subtitulo {
   text-align: center;
-  color: #666;
+  color: var(--cor-texto-corpo);
   margin: 0 20px 35px 20px;
 }
 
@@ -37,7 +53,7 @@
   display: flex;
   gap: 30px;
   align-items: flex-start;
-  max-width: 1300px; /* Seu limite original */
+  max-width: 1300px;
   width: 100%;
   margin: 0 auto 60px auto; /* Centraliza apenas o miolo da página */
   padding: 0 20px;
@@ -62,7 +78,7 @@
   height: auto;
   display: block;
   border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 20px rgba(88, 28, 32, 0.04); /* Sombra suave no tom da marca */
 }
 
 /* Grid de Botões */
@@ -74,27 +90,28 @@
 
 .btn-sala {
   padding: 12px 8px;
-  background-color: #fff;
-  border: 1px solid #bc9c82;
-  color: #4a3b32;
+  background-color: var(--cor-card-fundo);
+  border: 1px solid var(--cor-detalhes); /* Borda em Rosa Chá */
+  color: var(--cor-texto-corpo);
   border-radius: 6px;
   cursor: pointer;
   font-size: 0.9rem;
   font-weight: 500;
-  transition: all 0.2s ease; /* Corrigido de ease-index para ease */
+  transition: all 0.2s ease;
   text-align: center;
 }
 
 .btn-sala:hover {
-  background-color: #fdf8f5;
-  border-color: #4a3b32;
+  background-color: var(--cor-destaque-bloco);
+  border-color: var(--cor-texto-escuro);
+  color: var(--cor-texto-escuro);
 }
 
 .btn-sala.ativo {
-  background-color: #bc9c82;
-  color: #fff;
-  box-shadow: 0 4px 12px rgba(188, 156, 130, 0.25);
-  border-color: #bc9c82;
+  background-color: var(--cor-texto-escuro); /* Sala selecionada destaca em Vinho */
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(88, 28, 32, 0.2);
+  border-color: var(--cor-texto-escuro);
 }
 
 /* ==========================================================================
@@ -102,13 +119,13 @@
    ========================================================================== */
 .planta-descricao-card {
   flex: 0.9;
-  background-color: #fff;
+  background-color: var(--cor-card-fundo);
   padding: 25px;
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-  border: 1px solid #eadecf;
+  box-shadow: 0 10px 30px rgba(88, 28, 32, 0.02);
+  border: 1px solid #f2eae6;
   position: sticky;
-  top: 40px; /* Ajustado para dar um respiro caso o header seja fixo */
+  top: 40px;
   box-sizing: border-box;
 }
 
@@ -121,14 +138,14 @@
 
 .card-header h3 {
   margin: 0;
-  color: #4a3b32;
+  color: var(--cor-texto-escuro);
   font-size: 1.4rem;
   text-align: left;
 }
 
 .badge-tamanho {
-  background-color: #f5eae1;
-  color: #4a3b32;
+  background-color: var(--cor-destaque-bloco);
+  color: var(--cor-texto-escuro);
   padding: 5px 12px;
   border-radius: 20px;
   font-weight: bold;
@@ -138,30 +155,30 @@
 
 .planta-descricao-card hr {
   border: 0;
-  border-top: 1px solid #f1eae4;
+  border-top: 1px solid #f2eae6;
   margin: 15px 0;
 }
 
 .texto-descricao, .texto-detalhes {
   font-size: 1rem;
   line-height: 1.6;
-  color: #444;
+  color: var(--cor-texto-corpo);
   margin-bottom: 15px;
-  text-align: left; /* Garante alinhamento textual correto */
+  text-align: left;
 }
 
 /* Caixa de Observações Técnicas */
 .observacoes-fixas {
   margin-top: 30px;
-  background-color: #faf8f6;
+  background-color: var(--cor-destaque-bloco); /* Fundo rosé sutil */
   padding: 15px;
   border-radius: 10px;
-  border-left: 4px solid #bc9c82;
+  border-left: 4px solid var(--cor-detalhes); /* Marcador em Rosa Chá */
 }
 
 .observacoes-fixas h4 {
   margin: 0 0 8px 0;
-  color: #4a3b32;
+  color: var(--cor-texto-escuro);
   font-size: 0.95rem;
   text-align: left;
 }
@@ -170,7 +187,7 @@
   margin: 0;
   padding-left: 20px;
   font-size: 0.85rem;
-  color: #666;
+  color: var(--cor-texto-corpo);
   text-align: left;
 }
 

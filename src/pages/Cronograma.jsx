@@ -5,7 +5,6 @@ import "./Cronograma.css"; // Certifique-se de importar o arquivo CSS
 export default function Cronograma() {
   return (
     <div className="cronograma-page">
-      <Header />
       
       <main className="cronograma-main">
         <h2 className="cronograma-principal-titulo">Cronograma de Eventos Semanais</h2>
@@ -140,7 +139,6 @@ export default function Cronograma() {
         </section>
       </main>
 
-      <Footer />
     </div>
   );
 }

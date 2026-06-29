@@ -1,13 +1,35 @@
+/* ==========================================================================
+   VARIÁVEIS DE COR (BASEADAS NA LOGO ESSÊNCIA VIVA)
+   ========================================================================== */
+:root {
+  --cor-fundo: #FBF9F6;            /* Creme suave e acolhedor */
+  --cor-texto-escuro: #581C20;     /* O Vinho profundo e elegante da logo */
+  --cor-texto-corpo: #4A3E3F;      /* Grafite quente para leitura confortável */
+  --cor-detalhes: #C39399;         /* Rosa Chá / Mauve para marcadores, bordas e badges */
+  --cor-destaque-bloco: #F5EDED;   /* Tom sutil para fundos de blocos destacados */
+  --cor-card-fundo: #FFFFFF;       /* Branco puro para destacar os cards */
+  --cor-elemento-clinico: #3D5A46; /* Verde Oliva clínico para equilíbrio de saúde e vida */
+  --cor-clinico-hover: #2B4032;    /* Verde oliva mais escuro para estados de hover */
+  --cor-vinho-hover: #3F1417;      /* Vinho mais escuro para estados de hover */
+}
+
 /* Configuração Geral da Página */
 .cronograma-main {
   max-width: 1200px;
   margin: 40px auto;
   padding: 0 20px;
-  font-family: sans-serif;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: var(--cor-texto-corpo);
+  
+  /* Proteção estrutural para integração com Header e Footer */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .cronograma-principal-titulo {
-  color: #2c3e35;
+  color: var(--cor-texto-escuro);
   text-align: center;
   font-size: 2rem;
   margin-bottom: 30px;
@@ -23,21 +45,22 @@
 
 /* Cartões do Calendário */
 .calendario-card {
-  background: #ffffff;
+  background: var(--cor-card-fundo);
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  border: 1px solid #f0eae4;
+  box-shadow: 0 4px 15px rgba(88, 28, 32, 0.03);
+  border: 1px solid #f2eae6;
   overflow: hidden;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .calendario-card:hover {
   transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(195, 147, 153, 0.15);
 }
 
 /* Cabeçalho de cada dia */
 .calendario-dia-header {
-  background-color: #2c3e35; /* Verde Escuro */
+  background-color: var(--cor-texto-escuro); /* Vinho imponente no topo de cada dia */
   padding: 15px;
   color: #ffffff;
   text-align: center;
@@ -47,11 +70,12 @@
   margin: 0;
   font-size: 1.2rem;
   font-weight: 600;
+  color: #ffffff;
 }
 
 .calendario-dia-header span {
   font-size: 0.8rem;
-  color: #bc9c82; /* Tom bronze */
+  color: var(--cor-detalhes); /* Transforma o subtítulo do dia em Rosa Chá */
   display: block;
   margin-top: 4px;
 }
@@ -65,8 +89,8 @@
 
 .calendario-lista li {
   padding: 8px 0;
-  border-bottom: 1px solid #fdfbf9;
-  color: #555;
+  border-bottom: 1px solid var(--cor-destaque-bloco);
+  color: var(--cor-texto-corpo);
   font-size: 0.9rem;
 }
 
@@ -78,14 +102,14 @@
    ESTILIZAÇÃO DO FLUXO MULTIPROFISSIONAL (RODAPÉ)
    ========================================================================== */
 .fluxo-section {
-  background-color: #faf7f4;
+  background-color: var(--cor-destaque-bloco); /* Fundo em tom rosé sutil */
   padding: 40px 20px;
   border-radius: 16px;
-  border: 1px solid #f0eae4;
+  border: 1px solid #f2eae6;
 }
 
 .fluxo-principal-titulo {
-  color: #2c3e35;
+  color: var(--cor-texto-escuro);
   text-align: center;
   font-size: 1.8rem;
   margin-bottom: 30px;
@@ -98,15 +122,15 @@
 }
 
 .fluxo-card {
-  background: #ffffff;
+  background: var(--cor-card-fundo);
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
-  border-top: 4px solid #bc9c82; /* Linha bronze superior no card */
+  box-shadow: 0 2px 10px rgba(88, 28, 32, 0.02);
+  border-top: 4px solid var(--cor-detalhes); /* Linha elegante superior em Rosa Chá */
 }
 
 .fluxo-card h4 {
-  color: #2c3e35;
+  color: var(--cor-texto-escuro);
   margin-top: 0;
   font-size: 1.1rem;
   margin-bottom: 15px;
@@ -114,7 +138,7 @@
 
 .fluxo-card h4 small {
   font-weight: normal;
-  color: #777;
+  color: var(--cor-texto-corpo);
   display: block;
   font-size: 0.85rem;
   margin-top: 2px;
@@ -129,15 +153,15 @@
 .fluxo-card ul li {
   padding: 6px 0;
   font-size: 0.9rem;
-  color: #555;
+  color: var(--cor-texto-corpo);
   position: relative;
   padding-left: 15px;
 }
 
-/* Adiciona um pequeno ponto bronze personalizado na lista */
+/* Adiciona um pequeno ponto personalizado com a nova identidade */
 .fluxo-card ul li::before {
   content: "•";
-  color: #bc9c82;
+  color: var(--cor-detalhes);
   font-weight: bold;
   position: absolute;
   left: 0;
@@ -145,18 +169,26 @@
 
 .fluxo-footer {
   font-size: 0.85rem;
-  color: #bc9c82;
+  color: var(--cor-texto-escuro);
   font-weight: 600;
-  background: #fdfaf7;
+  background: var(--cor-fundo);
   padding: 8px 12px;
   border-radius: 4px;
   display: inline-block;
+  border: 1px solid #f2eae6;
 }
 
 .fluxo-footer-objetivo {
   font-size: 0.85rem;
-  color: #555;
+  color: var(--cor-texto-corpo);
   line-height: 1.4;
-  border-top: 1px dashed #e6dfd9;
+  border-top: 1px dashed var(--cor-detalhes);
   padding-top: 10px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .calendario-grid, .fluxo-container {
+    grid-template-columns: 1fr;
+  }
 }

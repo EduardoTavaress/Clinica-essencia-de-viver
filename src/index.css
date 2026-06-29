@@ -1,12 +1,13 @@
-/* Cole isso no final do seu index.css ou App.css global */
-html, 
-body, 
-#root, 
-#root > div {
-  height: 100% !important;
-  min-height: 100vh !important;
-  display: flex;
-  flex-direction: column;
+/* Zera as margens que vêm por padrão no navegador */
+html, body, #root {
   margin: 0;
   padding: 0;
+  width: 100%;
+  min-height: 100vh; /* Permite que o site cresça verticalmente */
+}
+
+/* ⚠️ IMPORTANTE: Se o seu #root tiver um "max-width" ou "padding" (muito comum em projetos criados com Vite), remova ou comente essas linhas, pois elas espremem o Header e o Footer pelas laterais. */
+#root {
+  max-width: 100% !important;
+  padding: 0 !important;
 }

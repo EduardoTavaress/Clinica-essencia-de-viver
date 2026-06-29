@@ -1,30 +1,61 @@
+/* ==========================================================================
+   VARIÁVEIS DE COR (BASEADAS NA LOGO ESSÊNCIA VIVA)
+   ========================================================================== */
+:root {
+  --cor-fundo: #FBF9F6;            /* Creme suave e acolhedor */
+  --cor-texto-escuro: #581C20;     /* O Vinho profundo e elegante da logo */
+  --cor-texto-corpo: #4A3E3F;      /* Grafite quente para leitura confortável */
+  --cor-detalhes: #C39399;         /* Rosa Chá / Mauve para marcadores, bordas e badges */
+  --cor-destaque-bloco: #F5EDED;   /* Tom sutil para fundos de blocos destacados */
+  --cor-card-fundo: #FFFFFF;       /* Branco puro para destacar os cards */
+  --cor-elemento-clinico: #3D5A46; /* Verde Oliva clínico para equilíbrio de saúde e vida */
+  --cor-clinico-hover: #2B4032;    /* Verde oliva mais escuro para estados de hover */
+  --cor-vinho-hover: #3F1417;      /* Vinho mais escuro para estados de hover */
+}
+
 /* ==========================================
    CONFIGURAÇÕES GLOBAIS DA PÁGINA DE SERVIÇOS
    ========================================== */
 .servicos-container {
   font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  color: #3d4a41;
-  background-color: #faf8f5;
+  color: var(--cor-texto-corpo);
+  background-color: var(--cor-fundo);
   line-height: 1.6;
+  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  align-items: stretch !important;
+  overflow-x: hidden;
 }
 
 .servicos-container section {
   padding: 60px 20px;
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .titulo-secao {
   font-size: 2rem;
-  color: #2c3e35;
+  color: var(--cor-texto-escuro);
   text-align: center;
   margin-bottom: 10px;
 }
 
 .subtitulo-secao {
   text-align: center;
-  color: #65776c;
+  color: var(--cor-texto-corpo);
   margin-bottom: 40px;
+}
+
+.subtitulo-secao-ajuste {
+  text-align: center;
+  color: var(--cor-texto-corpo);
+  margin-top: -5px;
+  margin-bottom: 35px;
 }
 
 /* ---- 1. HERO DA PÁGINA ---- */
@@ -35,80 +66,78 @@
 
 .servicos-hero h2 {
   font-size: 2.5rem;
-  color: #2c3e35;
+  color: var(--cor-texto-escuro);
   margin-bottom: 10px;
 }
 
 .subtitulo-geral {
   font-size: 1.15rem;
-  color: #65776c;
+  color: var(--cor-texto-corpo);
 }
 
-/* ---- 2. CARDS MULTIPROFISSIONAIS (COM HOVER) ---- */
+/* ---- 2. CARDS MULTIPROFISSIONAIS ---- */
 .card-multiprofissional {
-  background-color: #ffffff;
-  padding: 40px;
+  background-color: var(--cor-card-fundo);
+  padding: 40px 25px;
   border-radius: 16px;
-  box-shadow: 0 4px 15px rgba(74, 92, 82, 0.02);
-  border: 1px solid #eeebe5;
+  box-shadow: 0 4px 15px rgba(88, 28, 32, 0.02);
+  border: 1px solid #f2eae6;
   text-align: center;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .card-multiprofissional:hover {
   transform: translateY(-5px);
-  border-color: #bc9c82;
-  box-shadow: 0 15px 30px rgba(188, 156, 130, 0.08);
-  background-color: #fdfcfb;
+  border-color: var(--cor-detalhes);
+  box-shadow: 0 15px 30px rgba(195, 147, 153, 0.12);
 }
 
 .contexto-multiprofissional {
-  color: #65776c;
+  color: var(--cor-texto-corpo);
   margin-bottom: 25px;
 }
 
 .tags-profissoes {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
 .tags-profissoes span {
-  background-color: #f3ede4;
-  color: #4a3b32;
-  padding: 8px 20px;
+  background-color: var(--cor-destaque-bloco);
+  color: var(--cor-texto-escuro);
+  padding: 8px 18px;
   border-radius: 50px;
   font-weight: 500;
   font-size: 0.95rem;
   border: 1px solid #e5ded4;
 }
 
-/* ---- 3. ATENDIMENTOS INDIVIDUAIS (COM HOVER) ---- */
+/* ---- 3. ATENDIMENTOS INDIVIDUAIS ---- */
 .grid-servicios-tipos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Flexibilidade total para telas pequenas */
   gap: 30px;
   margin-bottom: 40px;
 }
 
 .tipo-servico-card {
-  background: #ffffff;
+  background: var(--cor-card-fundo);
   border-radius: 16px;
-  box-shadow: 0 4px 15px rgba(74, 92, 82, 0.02);
-  border: 1px solid #eeebe5;
+  box-shadow: 0 4px 15px rgba(88, 28, 32, 0.02);
+  border: 1px solid #f2eae6;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .tipo-servico-card:hover {
-  transform: translateY(-8px) scale(1.01);
-  border-color: #bc9c82;
-  box-shadow: 0 20px 40px rgba(188, 156, 130, 0.1);
-}
-
-.grid-servicios-tipos:hover .tipo-servico-card:not(:hover) {
-  opacity: 0.8;
+  transform: translateY(-8px);
+  border-color: var(--cor-detalhes);
+  box-shadow: 0 20px 40px rgba(195, 147, 153, 0.15);
 }
 
 .card-header-tipo {
@@ -117,8 +146,8 @@
   text-align: center;
 }
 
-.card-header-tipo.reparadora { background-color: #5c6e63; }
-.card-header-tipo.integrativa { background-color: #728479; }
+.card-header-tipo.reparadora { background-color: var(--cor-texto-escuro); }
+.card-header-tipo.integrativa { background-color: var(--cor-texto-escuro); }
 
 .card-header-tipo h3 {
   margin: 0;
@@ -128,27 +157,35 @@
 }
 
 .lista-servicos-itens {
-  padding: 25px 30px;
+  padding: 25px 20px;
   margin: 0;
   list-style-type: none;
 }
 
 .lista-servicos-itens li {
   padding: 12px 0;
-  border-bottom: 1px solid #faf6f0;
+  border-bottom: 1px solid #f5eded;
   color: #444;
+  font-size: 0.95rem;
 }
 
 .lista-servicos-itens li:last-child {
   border-bottom: none;
 }
 
-/* ---- 4. CONTAINER DE OFICINAS GRATUITAS ---- */
+.card-footer-botao {
+  padding: 15px 20px 25px 20px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+
+/* ---- 4. OFICINAS GRATUITAS ---- */
 .oficinas-container-destaque {
-  background-color: #fdfbf7;
-  border: 1px dashed #bc9c82;
+  background-color: var(--cor-destaque-bloco);
+  border: 1px dashed var(--cor-detalhes);
   border-radius: 16px;
-  padding: 35px;
+  padding: 30px 20px;
   margin-top: 40px;
 }
 
@@ -159,65 +196,101 @@
   flex-wrap: wrap;
   gap: 15px;
   margin-bottom: 25px;
-  border-bottom: 1px solid #eadecf;
+  border-bottom: 1px solid var(--cor-detalhes);
   padding-bottom: 15px;
 }
 
 .oficinas-header h3 {
   margin: 0;
-  color: #4a3b32;
-  font-size: 1.5rem;
+  color: var(--cor-texto-escuro);
+  font-size: 1.4rem;
 }
 
 .badge-gratis {
-  background-color: #bc9c82;
+  background-color: var(--cor-texto-escuro);
   color: #fff;
   padding: 6px 14px;
   border-radius: 50px;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
 }
 
 .oficinas-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 15px;
 }
 
 .oficina-item {
-  background: #ffffff;
+  background: var(--cor-card-fundo);
   padding: 15px;
   border-radius: 8px;
   font-size: 0.95rem;
-  border-left: 4px solid #bc9c82;
-  box-shadow: 0 2px 8px rgba(188, 156, 130, 0.03);
-  border-y: 1px solid #eeebe5;
-  border-right: 1px solid #eeebe5;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border-left: 4px solid var(--cor-detalhes);
+  box-shadow: 0 2px 8px rgba(88, 28, 32, 0.02);
+  border-top: 1px solid #f2eae6;
+  border-bottom: 1px solid #f2eae6;
+  border-right: 1px solid #f2eae6;
+  transition: all 0.3s ease;
 }
 
 .oficina-item:hover {
-  transform: translateX(5px);
-  background-color: #fdfcfb;
-  box-shadow: 0 5px 15px rgba(188, 156, 130, 0.1);
+  transform: translateX(4px);
 }
 
-/* ---- 5. CARDS DE PACOTES (HOVER DINÂMICO) ---- */
+.oficinas-footer-botao {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.btn-whatsapp-oficinas {
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  background-color: #58d172;
+  color: #ffffff !important;
+  text-decoration: none;
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(88, 209, 114, 0.2);
+  transition: all 0.3s ease;
+}
+
+.btn-whatsapp-oficinas:hover {
+  background-color: #46b95f;
+  transform: translateY(-2px);
+}
+
+.wpp-svg-icone {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+  flex-shrink: 0;
+}
+
+/* ---- 5. CARDS DE PACOTES ---- */
 .grid-pacotes {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Permite redução limpa no mobile */
   gap: 30px;
-  align-items: start;
+  align-items: stretch;
   padding: 20px 0;
 }
 
 .pacote-card {
-  background: #ffffff;
+  background: var(--cor-card-fundo);
   border-radius: 20px;
-  padding: 35px 30px;
-  border: 1px solid #eeebe5;
-  box-shadow: 0 4px 15px rgba(74, 92, 82, 0.02);
+  padding: 35px 25px;
+  border: 1px solid #f2eae6;
+  box-shadow: 0 4px 15px rgba(88, 28, 32, 0.02);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -226,47 +299,41 @@
   top: 20px;
   right: 20px;
   font-size: 0.75rem;
-  background-color: #f3ede4;
+  background-color: var(--cor-destaque-bloco);
   padding: 4px 12px;
   border-radius: 50px;
   font-weight: bold;
-  color: #728479;
-  transition: all 0.3s ease;
+  color: var(--cor-texto-escuro);
 }
 
 .pacote-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  border: 2px solid #bc9c82;
-  box-shadow: 0 20px 40px rgba(188, 156, 130, 0.12);
-  background-color: #fdfcfb;
-}
-
-.pacote-card:hover .pacote-badge {
-  background-color: #bc9c82;
-  color: #ffffff;
-}
-
-.grid-pacotes:hover .pacote-card:not(:hover) {
-  opacity: 0.75;
-  transform: scale(0.98);
+  transform: translateY(-8px);
+  border: 1px solid var(--cor-detalhes);
+  box-shadow: 0 20px 40px rgba(195, 147, 153, 0.15);
 }
 
 .pacote-card h3 {
-  font-size: 1.6rem;
-  margin-top: 20px;
-  color: #2c3e35;
-  margin-bottom: -20px;
+  font-size: 1.5rem;
+  margin-top: 15px;
+  color: var(--cor-texto-escuro);
+  margin-bottom: 15px;
 }
 
-.pacote-desc, .pacote-indicado {
+.pacote-desc {
   font-size: 0.95rem;
-  color: #444;
-  margin-bottom: -15px;
+  color: var(--cor-texto-corpo);
+  margin-bottom: 12px;
+}
+
+.pacote-indicado {
+  font-size: 0.95rem;
+  color: var(--cor-texto-corpo);
+  margin-bottom: 20px;
 }
 
 .pacote-cronograma {
-  margin-top: 25px;
-  border-top: 1px solid #eeebe5;
+  margin-top: auto;
+  border-top: 1px solid #f2eae6;
   padding-top: 20px;
 }
 
@@ -284,150 +351,96 @@
 .pacote-cronograma ul li {
   font-size: 0.9rem;
   padding: 8px 0;
-  border-bottom: 1px dashed #f5f2eb;
+  border-bottom: 1px dashed var(--cor-destaque-bloco);
   color: #555;
 }
 
-/* Ajuste essencial para fazer o botão ir para o rodapé do card automaticamente */
-.tipo-servico-card, .pacote-card {
+.pacote-footer-wrapper {
+  margin-top: 20px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Empurra o conteúdo para cima e o botão para baixo */
-  min-height: 100%; /* Garante altura igual entre eles no grid */
+  justify-content: flex-end;
 }
 
-/* Container do botão alinhado à esquerda */
-.card-footer-botao {
-  display: flex;
-  justify-content: flex-end; /* Alinha o botão no canto esquerdo inferior */
-  padding: 0 30px 25px 30px; /* Espaçamento interno elegante nas bordas */
-  margin-top: auto; /* Força o elemento a colar no chão do card */
-}
-
-.pacote-footer-botao {
-  display: flex;
-  justify-content: flex-end; /* Alinha o botão no canto esquerdo inferior */
-  margin-top: 10px; /* Força o elemento a colar no chão do card */
-  margin-right: -15px;
-  margin-bottom: -15px;
-}
-
-/* O Botão Corporativo e Elegante */
-.btn-adquirir {
-  display: inline-block;
-  text-decoration: none;
-  background-color: #5c6e63; /* Verde oliva da identidade */
+/* ---- BOTÕES ---- */
+.btn-escolher-plano, .btn-escolher-pacote {
+  background-color: var(--cor-texto-escuro);
   color: #ffffff !important;
-  padding: 10px 24px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  border-radius: 8px;
-  border: 1px solid transparent;
-  box-shadow: 0 4px 10px rgba(92, 110, 99, 0.15);
-  transition: all 0.3s ease;
-}
-
-/* Estilo alternativo se quiser diferenciar o botão dos Pacotes */
-.btn-pacote {
-  background-color: #bc9c82; /* Tom bronze terapêutico */
-  box-shadow: 0 4px 10px rgba(188, 156, 130, 0.15);
-}
-
-/* Efeito Interativo ao passar o mouse no botão */
-.btn-adquirir:hover {
-  background-color: #2c3e35; /* Fica mais sóbrio e forte */
-  transform: translateY(-2px); /* Dá um pequeno pulinho responsivo */
-  box-shadow: 0 6px 15px rgba(44, 62, 53, 0.25);
-}
-
-.btn-pacote:hover {
-  background-color: #4a3b32; /* Tom marrom terra escuro para o pacote */
-  box-shadow: 0 6px 15px rgba(74, 59, 50, 0.25);
-}
-
-/* Container para centralizar o botão abaixo dos cards das oficinas */
-.oficinas-footer-botao {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-/* O Botão do WhatsApp customizado */
-.btn-whatsapp-oficinas {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  background-color: #58d172; /* Verde vivo do WhatsApp igual ao da imagem */
-  color: #ffffff !important;
-  text-decoration: none;
-  padding: 14px 32px;
-  font-size: 1.05rem;
-  font-weight: 600;
-  border-radius: 6px; /* Cantos levemente retangulares como na foto */
-  box-shadow: 0 4px 12px rgba(88, 209, 114, 0.2);
-  transition: all 0.3s ease;
-}
-
-/* Pequeno ajuste no símbolo/ícone */
-.wpp-icone {
-  font-size: 1.2rem;
-}
-
-/* Efeito de Hover ao passar o mouse */
-.btn-whatsapp-oficinas:hover {
-  background-color: #46b95f; /* Verde um pouco mais escuro */
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(70, 185, 95, 0.35);
-}
-
-.wpp-svg-icone {
-  width: 20px;
-  height: 20px;
-  fill: #ffffff; /* Faz o ícone do Whats ficar branquinho */
-}
-
-/* Resgata o padrão visual original do botão "Escolher Plano" */
-.btn-escolher-plano {
-  background-color: #bc9c82; /* Tom bronze original dos seus pacotes */
-  color: #ffffff !important;  /* Texto sempre em branco */
   border: none;
   font-size: 0.95rem;
   font-weight: 600;
   padding: 10px 24px;
-  border-radius: 8px;       /* Arredondamento suave idêntico ao padrão anterior */
+  border-radius: 8px;
   cursor: pointer;
-  display: inline-block;
-  
-  /* Garante o alinhamento correto caso esteja dentro de um container flex */
-  margin-top: 15px;
-  float: right;             /* Mantém posicionado à direita no rodapé do card */
-  
-  /* Transição fluida para os efeitos de passar o mouse */
-  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-/* Efeito de Hover clássico do seu tema */
-.btn-escolher-plano:hover {
-  background-color: #a4856c; /* Um tom bronze levemente mais escuro ao interagir */
-  transform: translateY(-2px); /* Discreto efeito de flutuar */
+.btn-escolher-plano:hover, .btn-escolher-pacote:hover {
+  background-color: var(--cor-vinho-hover);
+  transform: translateY(-2px);
 }
 
-/* Garante o comportamento correto ao clicar */
-.btn-escolher-plano:active {
-  transform: translateY(0);
-}
+/* ==========================================================================
+   ---- MEDIA QUERIES (RESPONSIVIDADE COMPLETA) ----
+   ========================================================================== */
 
-
-
-
-
-/* ---- RESPONSIVIDADE ---- */
-@media (max-width: 768px) {
-  .grid-servicios-tipos {
-    grid-template-columns: 1fr;
+@media (max-width: 1024px) {
+  .servicos-container section {
+    padding: 45px 20px;
   }
+  .servicos-hero h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .titulo-secao {
+    font-size: 1.7rem;
+  }
+  
+  .servicos-hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .subtitulo-geral {
+    font-size: 1rem;
+  }
+
+  .card-multiprofissional {
+    padding: 30px 15px;
+  }
+
+  .tags-profissoes {
+    gap: 8px;
+  }
+
+  .tags-profissoes span {
+    font-size: 0.85rem;
+    padding: 6px 14px;
+  }
+
   .oficinas-header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
+  }
+
+  .pacote-card {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-whatsapp-oficinas {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.9rem;
+    padding: 12px 16px;
+  }
+  .pacote-footer-wrapper, .card-footer-botao {
+    justify-content: center; /* Centraliza os botões em celulares muito pequenos */
+  }
+  .btn-escolher-plano, .btn-escolher-pacote {
+    width: 100%;
+    text-align: center;
   }
 }

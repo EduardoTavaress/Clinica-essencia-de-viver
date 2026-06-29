@@ -1,15 +1,10 @@
-import Header from "../componentes/Header";
-import "./Home.css"; // Arquivo de estilização que criaremos abaixo
+import "./Home.css"; 
 import logoImg from "../assets/logo.jpeg";
 import fundoImg from "../assets/fundo.jpeg";
-import Footer from "../componentes/Footer";
-
-
 
 export default function Home() {
   return (
     <div className="home-container">
-      <Header />
 
       {/* SEÇÃO HERO COM IMAGEM DE FUNDO DINÂMICA */}
       <section 
@@ -48,12 +43,13 @@ export default function Home() {
       {/* SEÇÃO SOBRE A ESSÊNCIA VIVA */}
       <section className="home-sobre">
         <div className="sobre-grid">
-          <div className="sobre-bloco">
+
+          <div className="sobre-bloco destaque">
             <h3>Sobre a Essência Viva</h3>
             <p><strong>Estamos focados em:</strong></p>
             <ul className="foco-lista">
               <li>Recuperação da autoestima</li>
-              <li>Bem-estar físico e emocional</li>
+              <li>Bem-estar físico e emotional</li>
               <li>Humanização do cuidado</li>
               <li>Atendimento individualizado e sensível ao contexto oncológico</li>
             </ul>
@@ -67,6 +63,7 @@ export default function Home() {
               processo de adoecimento, a essência e a força de cada pessoa continuam vivas e intocadas.
             </p>
           </div>
+          
         </div>
       </section>
 
@@ -98,12 +95,11 @@ export default function Home() {
           </div>
           <div className="diferencial-item">
             <h4>Rede de Parcerias</h4>
-            <p>Colaboração ativa com hospitais, clínicas oncológicas, ONGs de apoio e salões de beleza, permitindo o acompanhamento seguro durante todas as fases do tratamento.</p>
+            <p>Colaboração activa com hospitais, clínicas oncológicas, ONGs de apoio e salões de beleza, permitindo o acompanhamento seguro durante todas as fases do tratamento.</p>
           </div>
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

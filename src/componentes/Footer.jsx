@@ -8,7 +8,7 @@ export default function Footer() {
         
         {/* COLUNA 1: SOBRE E LOGO */}
         <div className="footer-col sobre">
-          <h3 className="footer-logo">Essência Viva</h3>
+          <h4 className="footer-logo">Essência Viva</h4>
           <p className="footer-descricao">
             Bem-estar oncológico e reabilitação integrativa. Cuidados especializados em enfermagem estética voltada para pacientes oncológicos.
           </p>
@@ -18,10 +18,11 @@ export default function Footer() {
         <div className="footer-col links">
           <h4>Navegação</h4>
           <ul>
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#pacotes">Pacotes</a></li>
-            <li><a href="#cronograma">Cronograma</a></li>
+            <li><a href="/">Início</a></li>
+            <li><a href="/Servicos">Serviços</a></li>
+            <li><a href="/Pacotes">Pacotes</a></li>
+            <li><a href="/Cronograma">Cronograma</a></li>
+
           </ul>
         </div>
 
@@ -38,7 +39,7 @@ export default function Footer() {
         {/* COLUNA 4: CONTATO E REDES SOCIAIS */}
         <div className="footer-col contato">
           <h4>Contato</h4>
-          <p><span>📍</span> Marituba - PA</p>
+          <p><span>📍</span> Belém - PA</p>
           <p><span>📞</span> (91) 99999-9999</p>
           
           {/* Ícones de Redes Sociais */}

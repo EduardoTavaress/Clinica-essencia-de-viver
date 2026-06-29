@@ -29,7 +29,7 @@
 }
 
 .footer-logo {
-  color: #bc9c82;
+  color: #ffffff;
   font-size: 1.6rem;
   margin: 0 0 15px 0;
   font-weight: 700;
@@ -143,7 +143,7 @@
 }
 
 .site-footer {
-  background-color: #2c3e35;
+  background-color: #581C20;
   color: #ffffff;
   padding: 50px 20px 20px 20px;
   font-family: sans-serif;
@@ -151,6 +151,6 @@
   box-sizing: border-box;
 
   /* --- AS DUAS LINHAS ATRÁS DA SOLUÇÃO --- */
-  box-shadow: 0 50vh 0 50vh #2c3e35; /* Cria uma "sombra" sólida verde gigante para baixo */
+  box-shadow: 0 50vh 0 50vh #581C20; /* Cria uma "sombra" sólida vinho gigante para baixo */
   position: relative;
 }

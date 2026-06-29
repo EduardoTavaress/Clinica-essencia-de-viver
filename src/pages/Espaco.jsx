@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './PlantaLocal.css';
 import imagemPlanta from '../assets/planta.jpeg'; // Certifique-se de salvar a imagem com este nome em assets
-import Header from "../componentes/Header"
+import Header from "../componentes/Header";
 import Footer from '../componentes/Footer';
 
-
 export default function PlantaLocal() {
+  // Referência para o card de informações
+  const cardDescricaoRef = useRef(null);
+
   // Dados extraídos fielmente da sua planta baixa e tabela
   const dadosSalas = {
     recepcao: {
@@ -84,10 +86,21 @@ export default function PlantaLocal() {
 
   const [salaAtiva, setSalaAtiva] = useState('recepcao');
 
+  // Função que muda a sala e rola a tela se for dispositivo móvel
+  const selecionarSala = (chaveSala) => {
+    setSalaAtiva(chaveSala);
+
+    // Se a largura da tela for menor ou igual a 950px (seu breakpoint mobile do CSS)
+    if (window.innerWidth <= 950 && cardDescricaoRef.current) {
+      cardDescricaoRef.current.scrollIntoView({
+        behavior: 'smooth', // Rolagem suave macia
+        block: 'start'      // Alinha o topo do card no topo da tela
+      });
+    }
+  };
+
   return (
     <div className="planta-secao">
-
-      <Header />
 
       <h2>Conheça Nossa Estrutura Integrativa</h2>
       <p className="subtitulo">Explore a distribuição dos nossos 608 m² clicando nos setores abaixo.</p>
@@ -101,23 +114,23 @@ export default function PlantaLocal() {
           </div>
 
           <div className="botoes-salas-grid">
-            <button className={salaAtiva === 'recepcao' ? 'btn-sala ativo' : 'btn-sala'} onClick={() => setSalaAtiva('recepcao')}>Recepção e Espera</button>
-            <button className={salaAtiva === 'coletiva' ? 'btn-sala ativo' : 'btn-sala'} onClick={() => setSalaAtiva('coletiva')}>Sala Coletiva</button>
-            <button className={salaAtiva === 'procedimentos' ? 'btn-sala ativo' : 'btn-sala'} onClick={() => setSalaAtiva('procedimentos')}>Procedimentos Estéticos</button>
-            <button className={salaAtiva === 'psicologico' ? 'btn-sala ativo' : 'btn-sala'} onClick={() => setSalaAtiva('psicologico')}>Atendimento Psicológico</button>
-            <button className={salaAtiva === 'enfermagem' ? 'btn-sala ativo' : 'btn-sala'} onClick={() => setSalaAtiva('enfermagem')}>Enfermagem</button>
-            <button className={salaAtiva === 'medico' ? 'btn-sala ativo' : 'btn-sala'} onClick={() => setSalaAtiva('medico')}>Consultório Médico</button>
-            <button className={salaAtiva === 'terapias' ? 'btn-sala ativo' : 'btn-sala'} onClick={() => setSalaAtiva('terapias')}>Terapias Integrativas</button>
-            <button className={salaAtiva === 'reabilitacao' ? 'btn-sala ativo' : 'btn-sala'} onClick={() => setSalaAtiva('reabilitacao')}>Reabilitação Física</button>
-            <button className={salaAtiva === 'almoxarifado' ? 'btn-sala ativo' : 'btn-sala'} onClick={() => setSalaAtiva('almoxarifado')}>Almoxarifado</button>
-            <button className={salaAtiva === 'esterilizacao' ? 'btn-sala ativo' : 'btn-sala'} onClick={() => setSalaAtiva('esterilizacao')}>Esterilização</button>
-            <button className={salaAtiva === 'copa' ? 'btn-sala ativo' : 'btn-sala'} onClick={() => setSalaAtiva('copa')}>Copa</button>
-            <button className={salaAtiva === 'banheiros' ? 'btn-sala ativo' : 'btn-sala'} onClick={() => setSalaAtiva('banheiros')}>Banheiros PCD</button>
+            <button className={salaAtiva === 'recepcao' ? 'btn-sala ativo' : 'btn-sala'} onClick={() => selecionarSala('recepcao')}>Recepção e Espera</button>
+            <button className={salaAtiva === 'coletiva' ? 'btn-sala ativo' : 'btn-sala'} onClick={() => selecionarSala('coletiva')}>Sala Coletiva</button>
+            <button className={salaAtiva === 'procedimentos' ? 'btn-sala ativo' : 'btn-sala'} onClick={() => selecionarSala('procedimentos')}>Procedimentos Estéticos</button>
+            <button className={salaAtiva === 'psicologico' ? 'btn-sala ativo' : 'btn-sala'} onClick={() => selecionarSala('psicologico')}>Atendimento Psicológico</button>
+            <button className={salaAtiva === 'enfermagem' ? 'btn-sala ativo' : 'btn-sala'} onClick={() => selecionarSala('enfermagem')}>Enfermagem</button>
+            <button className={salaAtiva === 'medico' ? 'btn-sala ativo' : 'btn-sala'} onClick={() => selecionarSala('medico')}>Consultório Médico</button>
+            <button className={salaAtiva === 'terapias' ? 'btn-sala ativo' : 'btn-sala'} onClick={() => selecionarSala('terapias')}>Terapias Integrativas</button>
+            <button className={salaAtiva === 'reabilitacao' ? 'btn-sala ativo' : 'btn-sala'} onClick={() => selecionarSala('reabilitacao')}>Reabilitação Física</button>
+            <button className={salaAtiva === 'almoxarifado' ? 'btn-sala ativo' : 'btn-sala'} onClick={() => selecionarSala('almoxarifado')}>Almoxarifado</button>
+            <button className={salaAtiva === 'esterilizacao' ? 'btn-sala ativo' : 'btn-sala'} onClick={() => selecionarSala('esterilizacao')}>Esterilização</button>
+            <button className={salaAtiva === 'copa' ? 'btn-sala ativo' : 'btn-sala'} onClick={() => selecionarSala('copa')}>Copa</button>
+            <button className={salaAtiva === 'banheiros' ? 'btn-sala ativo' : 'btn-sala'} onClick={() => selecionarSala('banheiros')}>Banheiros PCD</button>
           </div>
         </div>
 
-        {/* DIREITA: Card Informativo */}
-        <div className="planta-descricao-card">
+        {/* DIREITA: Card Informativo (Adicionado o parâmetro ref aqui) */}
+        <div className="planta-descricao-card" ref={cardDescricaoRef}>
           <div className="card-header">
             <h3>{dadosSalas[salaAtiva].titulo}</h3>
             <span className="badge-tamanho">{dadosSalas[salaAtiva].tamanho}</span>
@@ -138,7 +151,6 @@ export default function PlantaLocal() {
 
       </div>
 
-      <Footer />
     </div>
   );
 }
