@@ -1,21 +1,17 @@
 import Footer from "../componentes/Footer";
 import Header from "../componentes/Header";
-import "./Pacotes.css";
+import "../styles/pacotes.css";
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { useCarrinho } from '../context/CarrinhoContext'; // Importação do nosso hook
 
 export default function Pacotes() {
-  // Link padrão do WhatsApp com mensagem personalizada para o botão final
-  const linkWhatsapp = "https://wa.me/5596999999999?text=Olá! Gostaria de agendar um plano na Essência Viva.";
-
+  const { adicionarItem } = useCarrinho(); // Conexão com o gerenciador do carrinho
   const location = useLocation();
 
   useEffect(() => {
-    // Verifica se existe um ID enviado pelo botão da outra página
     if (location.state && location.state.scrollToId) {
       const id = location.state.scrollToId;
-      
-      // Dá um mini tempo (100ms) para garantir que a página carregou 100%
       setTimeout(() => {
         const elemento = document.getElementById(id);
         if (elemento) {
@@ -28,7 +24,6 @@ export default function Pacotes() {
   return (
     <div className="pacotes-container">
 
-      {/* CABEÇALHO DA PÁGINA */}
       <section className="pacotes-hero">
         <h2>Planos & Opções Unitárias</h2>
         <p className="pacotes-subtitulo">Escolha a melhor opção para sua jornada de cuidado e reabilitação integrativa</p>
@@ -47,7 +42,7 @@ export default function Pacotes() {
               <span className="servico-nome">Crioterapia Capilar (Queda de cabelo)</span>
               <div className="preco-botao-wrapper">
                 <strong className="servico-valor">R$ 350</strong>
-                <button className="btn-comprar-unitario">Adquirir</button>
+                <button className="btn-comprar-unitario" onClick={() => adicionarItem({ id: 'crio-capilar', nome: 'Crioterapia Capilar', preco: 350 })}>Adquirir</button>
               </div>
             </div>
             
@@ -55,7 +50,7 @@ export default function Pacotes() {
               <span className="servico-nome">Laserterapia (Cicatrizes)</span>
               <div className="preco-botao-wrapper">
                 <strong className="servico-valor">R$ 200</strong>
-                <button className="btn-comprar-unitario">Adquirir</button>
+                <button className="btn-comprar-unitario" onClick={() => adicionarItem({ id: 'laserterapia', nome: 'Laserterapia (Cicatrizes)', preco: 200 })}>Adquirir</button>
               </div>
             </div>
 
@@ -63,7 +58,7 @@ export default function Pacotes() {
               <span className="servico-nome">Microagulhamento (Cicatrizes)</span>
               <div className="preco-botao-wrapper">
                 <strong className="servico-valor">R$ 150</strong>
-                <button className="btn-comprar-unitario">Adquirir</button>
+                <button className="btn-comprar-unitario" onClick={() => adicionarItem({ id: 'microagulhamento', nome: 'Microagulhamento (Cicatrizes)', preco: 150 })}>Adquirir</button>
               </div>
             </div>
 
@@ -71,7 +66,7 @@ export default function Pacotes() {
               <span className="servico-nome">Drenagem Linfática (Pós-mastectomia)</span>
               <div className="preco-botao-wrapper">
                 <strong className="servico-valor">R$ 120</strong>
-                <button className="btn-comprar-unitario">Adquirir</button>
+                <button className="btn-comprar-unitario" onClick={() => adicionarItem({ id: 'drenagem-pos', nome: 'Drenagem Linfática (Pós-mastectomia)', preco: 120 })}>Adquirir</button>
               </div>
             </div>
 
@@ -79,7 +74,7 @@ export default function Pacotes() {
               <span className="servico-nome">Pele Sensibilizada (Limpeza + Hidratação)</span>
               <div className="preco-botao-wrapper">
                 <strong className="servico-valor">R$ 80</strong>
-                <button className="btn-comprar-unitario">Adquirir</button>
+                <button className="btn-comprar-unitario" onClick={() => adicionarItem({ id: 'pele-sensibilizada', nome: 'Pele Sensibilizada (Limpeza + Hidratação)', preco: 80 })}>Adquirir</button>
               </div>
             </div>
           </div>
@@ -92,7 +87,7 @@ export default function Pacotes() {
               <span className="servico-nome">Massagem com Pedras Quentes</span>
               <div className="preco-botao-wrapper">
                 <strong className="servico-valor">R$ 120</strong>
-                <button className="btn-comprar-unitario">Adquirir</button>
+                <button className="btn-comprar-unitario" onClick={() => adicionarItem({ id: 'pedras-quentes', nome: 'Massagem com Pedras Quentes', preco: 120 })}>Adquirir</button>
               </div>
             </div>
 
@@ -100,7 +95,7 @@ export default function Pacotes() {
               <span className="servico-nome">Massagem Relaxante</span>
               <div className="preco-botao-wrapper">
                 <strong className="servico-valor">R$ 100</strong>
-                <button className="btn-comprar-unitario">Adquirir</button>
+                <button className="btn-comprar-unitario" onClick={() => adicionarItem({ id: 'massagem-relaxante', nome: 'Massagem Relaxante', preco: 100 })}>Adquirir</button>
               </div>
             </div>
             
@@ -108,7 +103,7 @@ export default function Pacotes() {
               <span className="servico-nome">Aromaterapia (Óleos Essenciais)</span>
               <div className="preco-botao-wrapper">
                 <strong className="servico-valor">R$ 80</strong>
-                <button className="btn-comprar-unitario">Adquirir</button>
+                <button className="btn-comprar-unitario" onClick={() => adicionarItem({ id: 'aromaterapia-oleos', nome: 'Aromaterapia (Óleos Essenciais)', preco: 80 })}>Adquirir</button>
               </div>
             </div>
 
@@ -116,7 +111,7 @@ export default function Pacotes() {
               <span className="servico-nome">Auriculoterapia</span>
               <div className="preco-botao-wrapper">
                 <strong className="servico-valor">R$ 80</strong>
-                <button className="btn-comprar-unitario">Adquirir</button>
+                <button className="btn-comprar-unitario" onClick={() => adicionarItem({ id: 'auriculoterapia', nome: 'Auriculoterapia', preco: 80 })}>Adquirir</button>
               </div>
             </div>
 
@@ -124,7 +119,7 @@ export default function Pacotes() {
               <span className="servico-nome">Aromaterapia (Escalda-pés)</span>
               <div className="preco-botao-wrapper">
                 <strong className="servico-valor">R$ 70</strong>
-                <button className="btn-comprar-unitario">Adquirir</button>
+                <button className="btn-comprar-unitario" onClick={() => adicionarItem({ id: 'aromaterapia-escalda', nome: 'Aromaterapia (Escalda-pés)', preco: 70 })}>Adquirir</button>
               </div>
             </div>    
           </div>
@@ -149,7 +144,7 @@ export default function Pacotes() {
               </div>
               <div>
                 <div className="preco-plano">R$ 320,00</div>
-                <a href="#" className="btn-adquirir-card" onClick={(e) => e.preventDefault()}>Adquirir Plano</a>
+                <button className="btn-adquirir-card" onClick={() => adicionarItem({ id: 'essencial-1m', nome: 'Pacote Essencial - 1 Mês', preco: 320 })}>Adquirir Plano</button>
               </div>
             </div>
             <div className="card-mes-plano">
@@ -159,7 +154,7 @@ export default function Pacotes() {
               </div>
               <div>
                 <div className="preco-plano">R$ 890,00</div>
-                <a href="#" className="btn-adquirir-card" onClick={(e) => e.preventDefault()}>Adquirir Plano</a>
+                <button className="btn-adquirir-card" onClick={() => adicionarItem({ id: 'essencial-3m', nome: 'Pacote Essencial - 3 Meses', preco: 890 })}>Adquirir Plano</button>
               </div>
             </div>
             <div className="card-mes-plano">
@@ -169,7 +164,7 @@ export default function Pacotes() {
               </div>
               <div>
                 <div className="preco-plano">R$ 1.680,00</div>
-                <a href="#" className="btn-adquirir-card" onClick={(e) => e.preventDefault()}>Adquirir Plano</a>
+                <button className="btn-adquirir-card" onClick={() => adicionarItem({ id: 'essencial-6m', nome: 'Pacote Essencial - 6 Meses', preco: 1680 })}>Adquirir Plano</button>
               </div>
             </div>
             <div className="card-mes-plano">
@@ -179,7 +174,7 @@ export default function Pacotes() {
               </div>
               <div>
                 <div className="preco-plano">R$ 3.180,00</div>
-                <a href="#" className="btn-adquirir-card" onClick={(e) => e.preventDefault()}>Adquirir Plano</a>
+                <button className="btn-adquirir-card" onClick={() => adicionarItem({ id: 'essencial-12m', nome: 'Pacote Essencial - 12 Meses', preco: 3180 })}>Adquirir Plano</button>
               </div>
             </div>
           </div>
@@ -199,7 +194,7 @@ export default function Pacotes() {
               </div>
               <div>
                 <div className="preco-plano">R$ 590,00</div>
-                <a href="#" className="btn-adquirir-card" onClick={(e) => e.preventDefault()}>Adquirir Plano</a>
+                <button className="btn-adquirir-card" onClick={() => adicionarItem({ id: 'bem-estar-1m', nome: 'Pacote Bem-estar - 1 Mês', preco: 590 })}>Adquirir Plano</button>
               </div>
             </div>
             <div className="card-mes-plano">
@@ -209,7 +204,7 @@ export default function Pacotes() {
               </div>
               <div>
                 <div className="preco-plano">R$ 1.650,00</div>
-                <a href="#" className="btn-adquirir-card" onClick={(e) => e.preventDefault()}>Adquirir Plano</a>
+                <button className="btn-adquirir-card" onClick={() => adicionarItem({ id: 'bem-estar-3m', nome: 'Pacote Bem-estar - 3 Meses', preco: 1650 })}>Adquirir Plano</button>
               </div>
             </div>
             <div className="card-mes-plano">
@@ -219,7 +214,7 @@ export default function Pacotes() {
               </div>
               <div>
                 <div className="preco-plano">R$ 3.120,00</div>
-                <a href="#" className="btn-adquirir-card" onClick={(e) => e.preventDefault()}>Adquirir Plano</a>
+                <button className="btn-adquirir-card" onClick={() => adicionarItem({ id: 'bem-estar-6m', nome: 'Pacote Bem-estar - 6 Meses', preco: 3120 })}>Adquirir Plano</button>
               </div>
             </div>
             <div className="card-mes-plano">
@@ -229,7 +224,7 @@ export default function Pacotes() {
               </div>
               <div>
                 <div className="preco-plano">R$ 5.980,00</div>
-                <a href="#" className="btn-adquirir-card" onClick={(e) => e.preventDefault()}>Adquirir Plano</a>
+                <button className="btn-adquirir-card" onClick={() => adicionarItem({ id: 'bem-estar-12m', nome: 'Pacote Bem-estar - 12 Meses', preco: 5980 })}>Adquirir Plano</button>
               </div>
             </div>
           </div>
@@ -249,7 +244,7 @@ export default function Pacotes() {
               </div>
               <div>
                 <div className="preco-plano">R$ 890,00</div>
-                <a href="#" className="btn-adquirir-card" onClick={(e) => e.preventDefault()}>Adquirir Plano</a>
+                <button className="btn-adquirir-card" onClick={() => adicionarItem({ id: 'recomeco-1m', nome: 'Pacote Recomeço - 1 Mês', preco: 890 })}>Adquirir Plano</button>
               </div>
             </div>
             <div className="card-mes-plano">
@@ -259,7 +254,7 @@ export default function Pacotes() {
               </div>
               <div>
                 <div className="preco-plano">R$ 2.590,00</div>
-                <a href="#" className="btn-adquirir-card" onClick={(e) => e.preventDefault()}>Adquirir Plano</a>
+                <button className="btn-adquirir-card" onClick={() => adicionarItem({ id: 'recomeco-3m', nome: 'Pacote Recomeço - 3 Meses', preco: 2590 })}>Adquirir Plano</button>
               </div>
             </div>
             <div className="card-mes-plano">
@@ -269,7 +264,7 @@ export default function Pacotes() {
               </div>
               <div>
                 <div className="preco-plano">R$ 4.990,00</div>
-                <a href="#" className="btn-adquirir-card" onClick={(e) => e.preventDefault()}>Adquirir Plano</a>
+                <button className="btn-adquirir-card" onClick={() => adicionarItem({ id: 'recomeco-6m', nome: 'Pacote Recomeço - 6 Meses', preco: 4990 })}>Adquirir Plano</button>
               </div>
             </div>
             <div className="card-mes-plano">
@@ -279,7 +274,7 @@ export default function Pacotes() {
               </div>
               <div>
                 <div className="preco-plano">R$ 8.990,00</div>
-                <a href="#" className="btn-adquirir-card" onClick={(e) => e.preventDefault()}>Adquirir Plano</a>
+                <button className="btn-adquirir-card" onClick={() => adicionarItem({ id: 'recomeco-12m', nome: 'Pacote Recomeço - 12 Meses', preco: 8900 })}>Adquirir Plano</button>
               </div>
             </div>
           </div>
@@ -316,14 +311,6 @@ export default function Pacotes() {
             </div>
           </div>
 
-        </div>
-
-        {/* BOTÃO CENTRAL DE CONTRATAÇÃO */}
-        <div className="container-botao-final">
-          <a href={linkWhatsapp} target="_blank" rel="noopener noreferrer" className="btn-adquirir-plano">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="wpp-icon"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
-            Falar com Especialista & Adquirir Plano
-          </a>
         </div>
       </section>
 

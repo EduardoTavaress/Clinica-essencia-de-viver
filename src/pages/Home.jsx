@@ -1,4 +1,4 @@
-import "./Home.css"; 
+import "../styles/Home.css"; // Certifique-se de importar o arquivo CSS
 import logoImg from "../assets/logo.jpeg";
 import fundoImg from "../assets/fundo.jpeg";
 

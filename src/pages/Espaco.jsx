@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import './PlantaLocal.css';
+import "../styles/PlantaLocal.css"; // Certifique-se de criar este arquivo CSS com os estilos necessários
 import imagemPlanta from '../assets/planta.jpeg'; // Certifique-se de salvar a imagem com este nome em assets
 import Header from "../componentes/Header";
 import Footer from '../componentes/Footer';
