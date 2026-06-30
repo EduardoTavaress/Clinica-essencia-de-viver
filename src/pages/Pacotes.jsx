@@ -1,6 +1,6 @@
 import Footer from "../componentes/Footer";
 import Header from "../componentes/Header";
-import "../styles/pacotes.css";
+import "../styles/Pacotes.css";
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useCarrinho } from '../context/CarrinhoContext'; // Importação do nosso hook
