@@ -1,6 +1,7 @@
-import { createBrowserRouter, Outlet } from "react-router-dom";
+// 1. ADICIONE O ScrollRestoration NO IMPORT ABAIXO:
+import { createBrowserRouter, Outlet, ScrollRestoration } from "react-router-dom";
 import Header from "./componentes/Header";
-import Footer from "./componentes/Footer"; // 1. IMPORTE O SEU FOOTER AQUI
+import Footer from "./componentes/Footer"; 
 
 import Home from "./pages/Home";
 import Servics from "./pages/Servicos";
@@ -12,19 +13,20 @@ import Espaco from "./pages/Espaco";
 function LayoutGlobal() {
   return (
     <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
-      <Header />
+      {/* 🚀 ELE VAI AQUI, BEM NO TOPO DO LAYOUT: */}
+      <ScrollRestoration />
       
-      {/* O 'flex: 1' faz com que a página ocupe todo o espaço restante, 
-          garantindo que o Footer fique sempre colado no rodapé da tela */}
+      <Header />
+
+      {/* O 'flex: 1' faz com que a página ocupe todo o espaço restante... */}
       <main style={{ flex: 1 }}>
         <Outlet />
       </main>
-      
+
       <Footer />
     </div>
   );
 }
-
 const router = createBrowserRouter([
   {
     path: "/",

@@ -6,11 +6,11 @@ export default function Home() {
   return (
     <div className="home-container">
 
-      {/* SEÇÃO HERO COM IMAGEM DE FUNDO DINÂMICA */}
-      <section 
-        className="home-hero" 
-        style={{ backgroundImage: `url(${fundoImg})` }}
-      >
+      {/* SEÇÃO HERO COM IMAGEM DE FUNDO COMO TAG HTML REAL */}
+      <section className="home-hero">
+        {/* Nova tag de imagem controlada pelo CSS */}
+        <img src={fundoImg} alt="Fundo Essência Viva" className="hero-bg-img" />
+
         {/* Camada escurecedora / suavizadora para dar leitura ao texto */}
         <div className="hero-overlay"></div>
 
