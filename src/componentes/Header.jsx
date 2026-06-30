@@ -19,6 +19,7 @@ export default function Header() {
       {/* CLASSE ADICIONADA: header-logo para gerenciar a ordem no Desktop */}
       <Link to="/" className="header-logo" onClick={fecharMenu}>
         <img src={logoImg} alt="Logo Essência Viva" width={100} />
+        <span className="header-logo-texto">Essência Viva</span>
       </Link>
 
       {/* Container das ações da direita (No Desktop vai para o fim, no Mobile fica ao lado do logo) */}

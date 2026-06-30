@@ -30,9 +30,20 @@
 
 /* ---- GERENCIAMENTO DE ORDEM NO DESKTOP ---- */
 .header-logo {
-  order: 1; /* Primeiro elemento à esquerda */
+  display: flex;
+  align-items: center; /* Centraliza verticalmente o texto com a logo */
+  gap: 10px;           /* Dá um espaço elegante entre a imagem e o texto */
+  text-decoration: none; /* Remove aquele sublinhado chato de link */
 }
 
+/* Estiliza o texto ao lado da logo */
+.header-logo-texto {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #581C20;      /* Usa o Vinho profundo oficial da sua marca */
+  white-space: nowrap; /* Garante que o nome não quebre em duas linhas */
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
 .header-nav {
   display: flex;
   gap: 30px;
@@ -184,14 +195,14 @@
 /* ==========================================================================
    CONFIGURAÇÃO DE RESPONSIVIDADE (TABLETES E CELULARES)
    ========================================================================== */
-@media (max-width: 768px) {
+@media (max-width: 1100px) { /* 🚀 Alterado aqui para cobrir tablets com folga! */
   .header {
     padding: 15px 20px;
     position: sticky;
   }
 
   .btn-hamburger {
-    display: flex;
+    display: flex; /* Garante que as 3 barrinhas apareçam no tablet */
   }
 
   /* Transforma a barra de navegação em uma gaveta suspensa (Dropdown) */
@@ -217,7 +228,7 @@
   }
 
   .header-nav.ativo {
-    max-height: 400px;
+    max-height: 400px; /* Quando aberto no tablet/celular */
   }
 
   .header-link {
@@ -233,6 +244,6 @@
   }
   
   .header-link::after {
-    display: none;
+    display: none; /* Remove a linha de efeito hover do desktop */
   }
 }

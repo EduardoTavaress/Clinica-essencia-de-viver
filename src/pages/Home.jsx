@@ -49,7 +49,7 @@ export default function Home() {
             <p><strong>Estamos focados em:</strong></p>
             <ul className="foco-lista">
               <li>Recuperação da autoestima</li>
-              <li>Bem-estar físico e emotional</li>
+              <li>Bem-estar físico e emocional</li>
               <li>Humanização do cuidado</li>
               <li>Atendimento individualizado e sensível ao contexto oncológico</li>
             </ul>
@@ -87,7 +87,7 @@ export default function Home() {
         <div className="diferenciais-grid">
           <div className="diferencial-item">
             <h4>Equipe Multiprofissional</h4>
-            <p>Atendimento feito por profissionais altamente especializados em oncologia e estética. Discussões de caso semanais incluindo enfermeiros para condutas personalizadas.</p>
+            <p>Atendimento feito por profissionais altamente especializados em oncologia e estética. Discussões de casos semanais incluindo enfermeiros para condutas personalizadas.</p>
           </div>
           <div className="diferencial-item">
             <h4>Ambiente Seguro</h4>
@@ -95,7 +95,7 @@ export default function Home() {
           </div>
           <div className="diferencial-item">
             <h4>Rede de Parcerias</h4>
-            <p>Colaboração activa com hospitais, clínicas oncológicas, ONGs de apoio e salões de beleza, permitindo o acompanhamento seguro durante todas as fases do tratamento.</p>
+            <p>Colaboração ativa com hospitais, clínicas oncológicas, ONGs de apoio e salões de beleza, permitindo o acompanhamento seguro durante todas as fases do tratamento.</p>
           </div>
         </div>
       </section>

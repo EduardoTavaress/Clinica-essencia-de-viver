@@ -109,7 +109,7 @@ export default function Servicos() {
             <div className="oficina-item">Design de sobrancelhas e reconstrução com henna</div>
             <div className="oficina-item">Orientações práticas de autocuidado diário</div>
             <div className="oficina-item">Grupos terapêuticos (Aberto ao público externo)</div>
-            <div className="oficina-item">Consultoria de imagem: uso de lenços, laces e perucas</div>
+            <div className="oficina-item">Consultoria de imagem: uso de lenços, laços e perucas</div>
             <div className="oficina-item">Orientações para o crescimento saudável do cabelo pós-tratamento</div>
           </div>
 
@@ -133,10 +133,10 @@ export default function Servicos() {
               <div className="pacote-cronograma">
                 <h4>Cronogramas Disponíveis:</h4>
                 <ul>
-                  <li><strong>1 Mês:</strong> 1 Drenagem + 1 Pele Sensibilizada + 1 Terapia Integrativa + 1 Consulta Inicial.</li>
-                  <li><strong>3 Meses:</strong> 3 Drenagens + 3 Peles Sensibilizadas + 3 Terapias Integrativas + 2 Consultas.</li>
-                  <li><strong>6 Meses:</strong> 6 Drenagens + 6 Peles Sensibilizadas + 6 Terapias Integrativas + 3 Consultas.</li>
-                  <li><strong>12 Meses:</strong> 12 Drenagens + 12 Peles Sensibilizadas + 12 Terapias Integrativas + 6 Consultas.</li>
+                  <li><strong>1 Mês:</strong> 1 Drenagem + 1 Cuidado com Pele Sensibilizada + 1 Terapia Integrativa + 1 Consulta Multiprofissional.</li>
+                  <li><strong>3 Meses:</strong> 3 Drenagens + 3 Cuidados com Pele Sensibilizada + 3 Terapias Integrativas + 2 Consultas Multiprofissionais.</li>
+                  <li><strong>6 Meses:</strong> 6 Drenagens + 6 Cuidados com Pele Sensibilizada + 6 Terapias Integrativas + 3 Consultas Multiprofissionais.</li>
+                  <li><strong>12 Meses:</strong> 12 Drenagens + 12 Cuidados com Pele Sensibilizada + 12 Terapias Integrativas + 6 Consultas Multiprofissionais.</li>
                 </ul>
               </div>
             </div>
@@ -160,10 +160,10 @@ export default function Servicos() {
               <div className="pacote-cronograma">
                 <h4>Cronogramas Disponíveis:</h4>
                 <ul>
-                  <li><strong>1 Mês:</strong> 2 Drenagens + 1 Pele Sensibilizada + 1 Massagem + 1 Auriculo + 1 Consulta.</li>
-                  <li><strong>3 Meses:</strong> 6 Drenagens + 3 Peles Sensibilizadas + 3 Auriculos + 1 Crioterapia + 3 Consultas.</li>
-                  <li><strong>6 Meses:</strong> 10 Drenagens + 6 Peles + 6 Massagens + 6 Auriculos + 2 Crioterapias + 4 Consultas.</li>
-                  <li><strong>12 Meses:</strong> 20 Drenagens + 12 Peles + 12 Massagens + 12 Auriculos + 4 Crioterapias + 6 Consultas.</li>
+                  <li><strong>1 Mês:</strong> 2 Drenagens + 1 Cuidado com Pele Sensibilizada + 1 Massagem + 1 Auriculoterapia + 1 Consulta Multiprofissional.</li>
+                  <li><strong>3 Meses:</strong> 6 Drenagens + 3 Cuidados com Pele Sensibilizada + 3 Auriculoterapias + 1 Crioterapia + 3 Consultas Multiprofissionais.</li>
+                  <li><strong>6 Meses:</strong> 10 Drenagens + 6 Cuidados com Pele Sensibilizada + 6 Massagens + 6 Auriculoterapias + 2 Crioterapias + 4 Consultas Multiprofissionais.</li>
+                  <li><strong>12 Meses:</strong> 20 Drenagens + 12 Cuidados com Pele Sensibilizada + 12 Massagens + 12 Auriculoterapias + 4 Crioterapias + 6 Consultas Multiprofissionais.</li>
                 </ul>
               </div>
             </div>
@@ -187,10 +187,10 @@ export default function Servicos() {
               <div className="pacote-cronograma">
                 <h4>Cronogramas Disponíveis:</h4>
                 <ul>
-                  <li><strong>1 Mês:</strong> 1 Proc. Reparador + 1 Drenagem + 1 Massagem + 1 Pele + 1 Terapia Integrativa + 1 Consulta.</li>
-                  <li><strong>3 Meses:</strong> 2 Proc. Reparadores + 3 Drenagens + 3 Massagens + 3 Peles + 3 Terapias + 1 Crioterapia + 2 Consultas.</li>
-                  <li><strong>6 Meses:</strong> 4 Proc. Reparadores + 6 Drenagens + 6 Massagens + 6 Peles + 6 Terapias + 2 Crioterapias + 3 Consultas.</li>
-                  <li><strong>12 Meses:</strong> 8 Proc. Reparadores + 12 Drenagens + 12 Massagens + 12 Peles + 12 Terapias + 4 Crioterapias + 6 Consultas.</li>
+                  <li><strong>1 Mês:</strong> 1 Procedimento Reparador + 1 Drenagem + 1 Massagem + 1 Cuidado com Pele Sensibilizada + 1 Terapia Integrativa + 1 Consulta Multiprofissional.</li>
+                  <li><strong>3 Meses:</strong> 2 Procedimentos Reparadores + 3 Drenagens + 3 Massagens + 3 Cuidados com Pele Sensibilizada + 3 Terapias + 1 Crioterapia + 2 Consultas Multiprofissionais.</li>
+                  <li><strong>6 Meses:</strong> 4 Procedimentos Reparadores + 6 Drenagens + 6 Massagens + 6 Cuidados com Pele Sensibilizada + 6 Terapias + 2 Crioterapias + 3 Consultas Multiprofissionais.</li>
+                  <li><strong>12 Meses:</strong> 8 Procedimentos Reparadores + 12 Drenagens + 12 Massagens + 12 Cuidados com Pele Sensibilizada + 12 Terapias + 4 Crioterapias + 6 Consultas Multiprofissionais.</li>
                 </ul>
               </div>
             </div>

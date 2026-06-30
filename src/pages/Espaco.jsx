@@ -34,7 +34,7 @@ export default function PlantaLocal() {
       titulo: "Sala Coletiva (Consultorias e Oficinas)",
       tamanho: "30,00 m²",
       descricao: "Espaço modular voltado para reuniões de grupo, oficinas de saúde, consultorias coletivas e grupos terapêuticos.",
-      detalhes: "Equipada com mesas redondas e cadeiras confortáveis para dinâmicas.",
+      detalhes: "Equipada com mesas e cadeiras confortáveis para dinâmicas.",
       imagem: imagemSalaColetiva
     },
     procedimentos: {

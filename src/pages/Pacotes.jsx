@@ -25,7 +25,7 @@ export default function Pacotes() {
     <div className="pacotes-container">
 
       <section className="pacotes-hero">
-        <h2>Planos & Opções Unitárias</h2>
+        <h2>Planos e Opções Unitárias</h2>
         <p className="pacotes-subtitulo">Escolha a melhor opção para sua jornada de cuidado e reabilitação integrativa</p>
       </section>
 
@@ -71,7 +71,7 @@ export default function Pacotes() {
             </div>
 
             <div className="linha-preco">
-              <span className="servico-nome">Pele Sensibilizada (Limpeza + Hidratação)</span>
+              <span className="servico-nome">Cuidado com Pele Sensibilizada (Limpeza + Hidratação)</span>
               <div className="preco-botao-wrapper">
                 <strong className="servico-valor">R$ 80</strong>
                 <button className="btn-comprar-unitario" onClick={() => adicionarItem({ id: 'pele-sensibilizada', nome: 'Pele Sensibilizada (Limpeza + Hidratação)', preco: 80 })}>Adquirir</button>
@@ -132,6 +132,7 @@ export default function Pacotes() {
         
         {/* ---- PACOTE ESSENCIAL ---- */}
         <div id="pacote-essencial" className="bloco-pacote essencial">
+
           <div className="pacote-main-header">
             <h3>Pacote Essencial</h3>
             <p>Acolhimento inicial, conforto físico e primeiros cuidados com a autoestima.</p>
@@ -140,7 +141,7 @@ export default function Pacotes() {
             <div className="card-mes-plano">
               <div>
                 <h5>1 Mês de Tratamento</h5>
-                <p>1 Drenagem linfática <br /> 1 Cuidado pele sensibilizada <br /> 1 Terapia integrativa <br /> 1 Consulta multiprofissional inicial</p>
+                <p>1 Consulta multiprofissional <br /> 1 Cuidado com pele sensibilizada <br /> 1 Drenagem linfática <br /> 1 Terapia integrativa <br /> </p>
               </div>
               <div>
                 <div className="preco-plano">R$ 320,00</div>
@@ -150,7 +151,7 @@ export default function Pacotes() {
             <div className="card-mes-plano">
               <div>
                 <h5>3 Meses de Tratamento</h5>
-                <p>3 Drenagens linfáticas <br /> 3 Cuidados pele sensibilizada <br /> 3 Terapias integrativas <br /> 2 Consultas multiprofissionais</p>
+                <p> 2 Consultas multiprofissionais <br /> 3 Cuidados com pele sensibilizada <br /> 3 Drenagens linfáticas <br /> 3 Terapias integrativas  </p>
               </div>
               <div>
                 <div className="preco-plano">R$ 890,00</div>
@@ -160,7 +161,7 @@ export default function Pacotes() {
             <div className="card-mes-plano">
               <div>
                 <h5>6 Meses de Tratamento</h5>
-                <p>6 Drenagens linfáticas <br /> 6 Cuidados pele sensibilizada <br /> 6 Terapias integrativas <br /> 3 Consultas multiprofissionais</p>
+                <p>3 Consultas multiprofissionais <br /> 6 Cuidados com pele sensibilizada <br /> 6 Drenagens linfáticas <br /> 6 Terapias integrativas </p>
               </div>
               <div>
                 <div className="preco-plano">R$ 1.680,00</div>
@@ -170,7 +171,7 @@ export default function Pacotes() {
             <div className="card-mes-plano">
               <div>
                 <h5>12 Meses de Tratamento</h5>
-                <p>12 Drenagens linfáticas <br /> 12 Cuidados pele sensibilizada <br /> 12 Terapias integrativas <br /> 6 Consultas multiprofissionais</p>
+                <p>6 Consultas multiprofissionais <br /> 12 Cuidados pele sensibilizada <br /> 12 Drenagens linfáticas <br /> 12 Terapias integrativas </p>
               </div>
               <div>
                 <div className="preco-plano">R$ 3.180,00</div>
@@ -178,6 +179,7 @@ export default function Pacotes() {
               </div>
             </div>
           </div>
+          
         </div>
 
         {/* ---- PACOTE BEM-ESTAR ---- */}
@@ -190,7 +192,7 @@ export default function Pacotes() {
             <div className="card-mes-plano">
               <div>
                 <h5>1 Mês de Tratamento</h5>
-                <p>2 Drenagens linfáticas <br /> 1 Cuidado pele sensibilizada <br /> 1 Massagem relaxante <br /> 1 Auriculoterapia <br /> 1 Consulta multiprofissional</p>
+                <p>1 Auriculoterapia <br /> 1 Consulta multiprofissional <br /> 1 Cuidado com pele sensibilizada <br /> 1 Massagem relaxante <br /> 2 Drenagens linfáticas</p>
               </div>
               <div>
                 <div className="preco-plano">R$ 590,00</div>
@@ -200,7 +202,7 @@ export default function Pacotes() {
             <div className="card-mes-plano">
               <div>
                 <h5>3 Meses de Tratamento</h5>
-                <p>6 Drenagens linfáticas <br /> 3 Cuidados pele sensibilizada <br /> 3 Auriculoterapias <br /> 1 Crioterapia capilar <br /> 3 Consultas multiprofissionais</p>
+                <p> 1 Crioterapia capilar <br /> 3 Auriculoterapias  <br /> 3 Consultas multiprofissionais  <br /> 3 Cuidados com pele sensibilizada  <br /> 3 Drenagens linfáticas</p>
               </div>
               <div>
                 <div className="preco-plano">R$ 1.650,00</div>
@@ -210,7 +212,7 @@ export default function Pacotes() {
             <div className="card-mes-plano">
               <div>
                 <h5>6 Meses de Tratamento</h5>
-                <p>10 Drenagens linfáticas <br /> 6 Cuidados pele <br /> 6 Massagens relaxantes <br /> 6 Auriculoterapias <br /> 2 Crioterapias <br /> 4 Consultas</p>
+                <p> 2 Crioterapias capilares <br /> 6 Auriculoterapias <br /> 6 Cuidados com pele sensibilizada  <br /> 6 Massagens relaxantes <br /> 10 Drenagens linfáticas</p>
               </div>
               <div>
                 <div className="preco-plano">R$ 3.120,00</div>
@@ -220,7 +222,7 @@ export default function Pacotes() {
             <div className="card-mes-plano">
               <div>
                 <h5>12 Meses de Tratamento</h5>
-                <p>20 Drenagens linfáticas <br /> 12 Cuidados pele <br /> 12 Massagens relaxantes <br /> 12 Auriculoterapias <br /> 4 Crioterapias <br /> 6 Consultas</p>
+                <p>4 Crioterapias capilares<br /> 6 Consultas multiprofissionais<br /> 12 Auriculoterapias<br /> 12 Cuidados com pele sensibilizada <br /> 12 Massagens relaxantes <br /> 20 Drenagens linfáticas  </p>
               </div>
               <div>
                 <div className="preco-plano">R$ 5.980,00</div>
@@ -240,7 +242,7 @@ export default function Pacotes() {
             <div className="card-mes-plano">
               <div>
                 <h5>1 Mês de Tratamento</h5>
-                <p>1 Procedimento reparador <br /> 1 Drenagem <br /> 1 Massagem terapêutica <br /> 1 Cuidado pele <br /> 1 Terapia integrativa <br /> 1 Consulta</p>
+                <p>1 Consulta multiprofissional<br /> 1 Cuidado com pele sensibilizada<br /> 1 Drenagem linfática<br /> 1 Massagem terapêutica <br />1 Procedimento reparador<br /> 1 Terapia integrativa</p>
               </div>
               <div>
                 <div className="preco-plano">R$ 890,00</div>
@@ -250,7 +252,7 @@ export default function Pacotes() {
             <div className="card-mes-plano">
               <div>
                 <h5>3 Meses de Tratamento</h5>
-                <p>2 Procedimentos reparadores <br /> 3 Drenagens <br /> 3 Massagens <br /> 3 Cuidados pele <br /> 3 Terapias <br /> 1 Crioterapia <br /> 2 Consultas</p>
+                <p>1 Crioterapia capilar<br /> 2 Consultas multiprofissionais <br />2 Procedimentos reparadores<br /> 3 Cuidados com pele sensibilizada <br /> 3 Drenagens linfáticas <br /> 3 Massagens terapêuticas  <br /> 3 Terapias integrativas</p>
               </div>
               <div>
                 <div className="preco-plano">R$ 2.590,00</div>
@@ -260,7 +262,7 @@ export default function Pacotes() {
             <div className="card-mes-plano">
               <div>
                 <h5>6 Meses de Tratamento</h5>
-                <p>4 Procedimentos reparadores <br /> 6 Drenagens <br /> 6 Massagens <br /> 6 Cuidados pele <br /> 6 Terapias <br /> 2 Crioterapias <br /> 3 Consultas</p>
+                <p>2 Crioterapias capilares<br /> 3 Consultas multiprofissionais <br /> 4 Procedimentos reparadores<br /> 6 Cuidados com pele sensibilizada <br /> 6 Drenagens linfáticas <br /> 6 Massagens terapêuticas  <br /> 6 Terapias integrativas</p>
               </div>
               <div>
                 <div className="preco-plano">R$ 4.990,00</div>
@@ -270,7 +272,7 @@ export default function Pacotes() {
             <div className="card-mes-plano">
               <div>
                 <h5>12 Meses de Tratamento</h5>
-                <p>8 Procedimentos reparadores <br /> 12 Drenagens <br /> 12 Massagens <br /> 12 Cuidados pele <br /> 12 Terapias <br /> 4 Crioterapias <br /> 6 Consultas</p>
+                <p>4 Crioterapias capilares<br /> 6 Consultas multiprofissionais<br /> 12 Cuidados  pele sensibilizada  <br /> 12 Drenagens linfáticas <br /> 12 Massagens terapêuticas<br /> 12 Procedimentos reparadores  <br /> 12 Terapias integrativas </p>
               </div>
               <div>
                 <div className="preco-plano">R$ 8.990,00</div>
@@ -284,12 +286,12 @@ export default function Pacotes() {
 
       {/* SEÇÃO 3: FORMAS DE PAGAMENTO */}
       <section className="secao-pagamento">
-        <h3>Formas de Pagamento & Condições</h3>
+        <h3>Formas de Pagamento e Condições</h3>
         <div className="pagamento-grid">
           
           <div className="pagamento-card destaque-pagamento">
             <h5>Cartão de Crédito</h5>
-            <p>Parcelamento disponível com taxa administrativa acima de 3x:</p>
+            <p>Parcelamento disponível com taxa administrativa acima de 3x :</p>
             <ul>
               <li><strong>1 mês:</strong> Sem parcelamento</li>
               <li><strong>3 meses:</strong> Até 3x sem Juros</li>
@@ -299,7 +301,7 @@ export default function Pacotes() {
           </div>
 
           <div className="pagamento-card destaque-pagamento">
-            <h5>À Vista & Boleto</h5>
+            <h5>À Vista e Boleto</h5>
             <div className="metodo-item">
               <strong>PIX e Débito: </strong>
               <span className="badge-Desconto">10% DE DESCONTO</span>
