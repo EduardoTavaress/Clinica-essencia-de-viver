@@ -33,11 +33,11 @@ export default function CarrinhoSidebar() {
                 </div>
                 
                 <div className="item-controles-direita">
-                  <div className="seletor-quantidade">
-                    <button onClick={() => alterarQuantidade(item.id, item.quantidade - 1)}>-</button>
-                    <span>{item.quantidade}</span>
-                    <button onClick={() => adicionarItem(item)}>+</button>
-                  </div>
+                    <div className="seletor-quantidade">
+                      <button onClick={() => alterarQuantidade(item.id, item.quantidade - 1)}>-</button>
+                      <span>{item.quantidade}</span>
+                      <button onClick={() => alterarQuantidade(item.id, item.quantidade + 1)}>+</button>
+                    </div>  
                   <button className="btn-remover-item" onClick={() => removerItem(item.id)}>Remover</button>
                 </div>
               </div>
