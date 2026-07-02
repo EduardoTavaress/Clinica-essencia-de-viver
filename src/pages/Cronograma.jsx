@@ -1,6 +1,6 @@
 import Footer from "../componentes/Footer";
 import Header from "../componentes/Header";
-import "../styles/Cronograma.css"; // Certifique-se de importar o arquivo CSS
+import "../styles/Cronograma.css";
 
 export default function Cronograma() {
   return (

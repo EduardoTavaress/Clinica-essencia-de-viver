@@ -22,13 +22,13 @@ export function CarrinhoProvider({ children }) {
     setCarrinho((prev) => {
       const existe = prev.find((i) => i.id === item.id);
       if (existe) {
-        // Se já existe no carrinho, aumenta a quantidade
+       
         return prev.map((i) => i.id === item.id ? { ...i, quantidade: i.quantidade + 1 } : i);
       }
-      // Se é novo, adiciona com quantidade 1
+     
       return [...prev, { ...item, quantidade: 1 }];
     });
-    setIsOpen(true); // Abre a aba lateral automaticamente para mostrar o item adicionado
+    setIsOpen(true); 
   };
 
   // Função para remover um item completamente
@@ -55,7 +55,7 @@ export function CarrinhoProvider({ children }) {
 
   // Monta o link do WhatsApp dinamicamente com a lista de itens
   const gerarLinkWhatsapp = () => {
-    const numeroWhatsApp = "5596999999999"; // Insira o número oficial aqui
+    const numeroWhatsApp = "5596999999999";
     let mensagem = "Olá! Gostaria de agendar os seguintes planos/procedimentos na *Essência Viva*:\n\n";
 
     carrinho.forEach((item) => {

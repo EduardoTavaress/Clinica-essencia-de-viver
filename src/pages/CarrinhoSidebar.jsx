@@ -1,6 +1,6 @@
 import React from 'react';
 import { useCarrinho } from '../context/CarrinhoContext';
-import '../styles/CarrinhoSidebar.css'; // Certifique-se de criar este arquivo CSS para estilizar a aba lateral
+import '../styles/CarrinhoSidebar.css';
 
 export default function CarrinhoSidebar() {
   const { carrinho, isOpen, setIsOpen, alterarQuantidade, removerItem, totalCarrinho, gerarLinkWhatsapp } = useCarrinho();

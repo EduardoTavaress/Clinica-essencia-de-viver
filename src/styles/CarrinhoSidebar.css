@@ -15,7 +15,7 @@
   width: 100%;
   max-width: 420px;
   height: 100%;
-  background-color: #FBF9F6; /* var(--cor-fundo) */
+  background-color: #FBF9F6;
   box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
@@ -29,7 +29,7 @@
 
 .carrinho-header {
   padding: 20px;
-  background-color: #581C20; /* var(--cor-texto-escuro) */
+  background-color: #581C20;
   color: #ffffff;
   display: flex;
   justify-content: space-between;

@@ -1,4 +1,4 @@
-import "../styles/Home.css"; // Certifique-se de importar o arquivo CSS
+import "../styles/Home.css";
 import logoImg from "../assets/logo.jpeg";
 import fundoImg from "../assets/fundo.jpeg";
 
@@ -11,7 +11,7 @@ export default function Home() {
         {/* Nova tag de imagem controlada pelo CSS */}
         <img src={fundoImg} alt="Fundo Essência Viva" className="hero-bg-img" />
 
-        {/* Camada escurecedora / suavizadora para dar leitura ao texto */}
+        {/* Camada escurecedora */}
         <div className="hero-overlay"></div>
 
         <div className="hero-content">
@@ -67,7 +67,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SEÇÃO CONTEXTO CIENTÍFICO / RELAÇÃO COM A CURA */}
+      {/* SEÇÃO CONTEXTO CIENTÍFICO */}
       <section className="home-contexto">
         <div className="contexto-wrapper">
           <h3>O Cuidado Além do Tratamento</h3>

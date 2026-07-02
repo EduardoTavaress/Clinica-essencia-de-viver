@@ -3,7 +3,9 @@ import Header from "../componentes/Header";
 import "../styles/Pacotes.css";
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { useCarrinho } from '../context/CarrinhoContext'; // Importação do nosso hook
+import { useCarrinho } from '../context/CarrinhoContext';
+
+
 
 export default function Pacotes() {
   const { adicionarItem } = useCarrinho(); // Conexão com o gerenciador do carrinho

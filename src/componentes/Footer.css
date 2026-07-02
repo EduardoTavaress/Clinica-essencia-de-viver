@@ -21,7 +21,7 @@
 
 /* Configuração interna de cada coluna */
 .footer-col h4 {
-  color: #bc9c82; /* Tom Bronze nos subtítulos */
+  color: #bc9c82; 
   font-size: 1.2rem;
   margin-top: 0;
   margin-bottom: 20px;
@@ -62,7 +62,7 @@
 
 /* Efeito de passar o mouse nos links */
 .footer-col.links ul li a:hover {
-  color: #bc9c82; /* Transiciona para bronze */
+  color: #bc9c82; 
 }
 
 .footer-col p {
@@ -105,7 +105,7 @@
 .footer-redes {
   margin-top: 15px;
   display: flex;
-  flex-direction: column; /* Organiza em blocos caso adicione mais redes depois */
+  flex-direction: column; 
   gap: 12px;
 }
 
@@ -113,7 +113,7 @@
 .rede-social-link {
   display: flex;
   align-items: center;
-  gap: 8px; /* Distância entre o logo do Instagram e o texto @ */
+  gap: 8px;
   text-decoration: none;
   color: #e0eae4;
   transition: color 0.2s ease;
@@ -127,19 +127,19 @@
   transition: fill 0.2s ease, transform 0.2s ease;
 }
 
-/* Configuração do texto do Instagram */
+
 .rede-username {
   font-size: 0.9rem;
 }
 
 /* Efeito Hover integrado (Muda a cor do texto e do ícone juntos) */
 .rede-social-link:hover .rede-icon {
-  fill: #bc9c82; /* Transiciona o ícone para bronze */
+  fill: #bc9c82; 
   transform: scale(1.05);
 }
 
 .rede-social-link:hover {
-  color: #bc9c82; /* Transiciona o texto para bronze */
+  color: #bc9c82; 
 }
 
 .site-footer {
@@ -151,6 +151,6 @@
   box-sizing: border-box;
 
   /* --- AS DUAS LINHAS ATRÁS DA SOLUÇÃO --- */
-  box-shadow: 0 50vh 0 50vh #581C20; /* Cria uma "sombra" sólida vinho gigante para baixo */
+  box-shadow: 0 50vh 0 50vh #581C20; 
   position: relative;
 }

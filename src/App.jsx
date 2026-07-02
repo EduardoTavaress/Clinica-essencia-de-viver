@@ -1,7 +1,7 @@
 import React from 'react';
-import { CarrinhoProvider } from './context/CarrinhoContext'; // Ajuste o caminho do import
+import { CarrinhoProvider } from './context/CarrinhoContext'; 
 import { BrowserRouter as Router } from 'react-router-dom';
-import CarrinhoSidebar from '../src/pages/CarrinhoSidebar'; // Vamos criar no Passo 3
+import CarrinhoSidebar from '../src/pages/CarrinhoSidebar';
 
 import { RouterProvider } from "react-router-dom"
 import router from "./router"

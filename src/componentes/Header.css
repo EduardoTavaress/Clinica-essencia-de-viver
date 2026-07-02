@@ -31,49 +31,49 @@
 /* ---- GERENCIAMENTO DE ORDEM NO DESKTOP ---- */
 .header-logo {
   display: flex;
-  align-items: center; /* Centraliza verticalmente o texto com a logo */
-  gap: 10px;           /* Dá um espaço elegante entre a imagem e o texto */
-  text-decoration: none; /* Remove aquele sublinhado chato de link */
+  align-items: center; 
+  gap: 10px;           
+  text-decoration: none; 
 }
 
-/* Estiliza o texto ao lado da logo */
+
 .header-logo-texto {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #581C20;      /* Usa o Vinho profundo oficial da sua marca */
-  white-space: nowrap; /* Garante que o nome não quebre em duas linhas */
+  color: #581C20;      
+  white-space: nowrap; 
   font-family: 'Segoe UI', Roboto, sans-serif;
 }
 .header-nav {
   display: flex;
   gap: 30px;
   align-items: center;
-  order: 2;         /* Segundo elemento (meio) */
-  margin-left: auto; /* Empurra o menu e o carrinho juntos para a extrema direita */
-  margin-right: 35px; /* Cria um recuo elegante separando os links do carrinho */
+  order: 2;         
+  margin-left: auto; 
+  margin-right: 35px; 
 }
 
 .header-actions-mobile {
   display: flex;
   align-items: center;
   gap: 15px;
-  order: 3; /* Terceiro elemento (último à direita no desktop) */
+  order: 3; 
 }
 
 /* Estilização da Imagem do Logo */
 .header-logo img {
   width: 65px;
   height: 65px;
-  border-radius: 50%; /* Transforma a imagem quadrada em um círculo perfeito */
-  object-fit: cover;   /* Garante que o ícone interno fique centralizado sem distorcer */
-  border: 2px solid #ffffff; /* Borda branca idêntica à medalha da Home */
-  box-shadow: 0 4px 12px rgba(88, 28, 32, 0.12); /* Sombra sutil para destacar a borda branca */
+  border-radius: 50%; 
+  object-fit: cover;   
+  border: 2px solid #ffffff; 
+  box-shadow: 0 4px 12px rgba(88, 28, 32, 0.12); 
   display: block;
   transition: transform 0.3s ease;
 }
 
 .header-logo img:hover {
-  transform: scale(1.05); /* Efeito de zoom sutil ao passar o mouse */
+  transform: scale(1.05); 
 }
 
 /* Estilo Individual dos Links do Menu */
@@ -195,14 +195,14 @@
 /* ==========================================================================
    CONFIGURAÇÃO DE RESPONSIVIDADE (TABLETES E CELULARES)
    ========================================================================== */
-@media (max-width: 1100px) { /* 🚀 Alterado aqui para cobrir tablets com folga! */
+@media (max-width: 1100px) { 
   .header {
     padding: 15px 20px;
     position: sticky;
   }
 
   .btn-hamburger {
-    display: flex; /* Garante que as 3 barrinhas apareçam no tablet */
+    display: flex; 
   }
 
   /* Transforma a barra de navegação em uma gaveta suspensa (Dropdown) */
@@ -228,7 +228,7 @@
   }
 
   .header-nav.ativo {
-    max-height: 400px; /* Quando aberto no tablet/celular */
+    max-height: 400px; 
   }
 
   .header-link {
@@ -244,6 +244,6 @@
   }
   
   .header-link::after {
-    display: none; /* Remove a linha de efeito hover do desktop */
+    display: none; 
   }
 }

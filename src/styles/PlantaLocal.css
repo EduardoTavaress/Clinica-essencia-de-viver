@@ -20,13 +20,11 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: var(--cor-fundo); /* Fundo creme suave oficial */
+  background-color: var(--cor-fundo); 
   margin: 0;
   padding: 0;
   width: 100%;
   font-family: 'Segoe UI', system-ui, sans-serif;
-  
-  /* Garante que o Header e o Footer se estendam por toda a tela */
   align-items: stretch !important;
   justify-content: flex-start !important;
 }
@@ -35,7 +33,7 @@
    CONTEÚDO DA PÁGINA (LIMITADO E CENTRALIZADO CORRETAMENTE)
    ========================================================================== */
 .planta-secao h2 {
-  color: var(--cor-texto-escuro); /* Vinho profundo no título principal */
+  color: var(--cor-texto-escuro);
   font-weight: 600;
   text-align: center;
   margin: 40px 20px 5px 20px;
@@ -55,7 +53,7 @@
   align-items: flex-start;
   max-width: 1300px;
   width: 100%;
-  margin: 0 auto 60px auto; /* Centraliza apenas o miolo da página */
+  margin: 0 auto 60px auto; 
   padding: 0 20px;
   box-sizing: border-box;
 }
@@ -65,7 +63,7 @@
    ========================================================================== */
 .planta-visual {
   flex: 1.4;
-  min-width: 0; /* Previne bugs de transbordo do Flexbox */
+  min-width: 0;
 }
 
 .mapa-container {
@@ -78,7 +76,7 @@
   height: auto;
   display: block;
   border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(88, 28, 32, 0.04); /* Sombra suave no tom da marca */
+  box-shadow: 0 8px 20px rgba(88, 28, 32, 0.04); 
 }
 
 /* Grid de Botões */
@@ -91,7 +89,7 @@
 .btn-sala {
   padding: 12px 8px;
   background-color: var(--cor-card-fundo);
-  border: 1px solid var(--cor-detalhes); /* Borda em Rosa Chá */
+  border: 1px solid var(--cor-detalhes); 
   color: var(--cor-texto-corpo);
   border-radius: 6px;
   cursor: pointer;
@@ -108,7 +106,7 @@
 }
 
 .btn-sala.ativo {
-  background-color: var(--cor-texto-escuro); /* Sala selecionada destaca em Vinho */
+  background-color: var(--cor-texto-escuro); 
   color: #ffffff;
   box-shadow: 0 4px 12px rgba(88, 28, 32, 0.2);
   border-color: var(--cor-texto-escuro);
@@ -170,10 +168,10 @@
 /* Caixa de Observações Técnicas */
 .observacoes-fixas {
   margin-top: 30px;
-  background-color: var(--cor-destaque-bloco); /* Fundo rosé sutil */
+  background-color: var(--cor-destaque-bloco); 
   padding: 15px;
   border-radius: 10px;
-  border-left: 4px solid var(--cor-detalhes); /* Marcador em Rosa Chá */
+  border-left: 4px solid var(--cor-detalhes); 
 }
 
 .observacoes-fixas h4 {
@@ -199,11 +197,11 @@
 /* Container da foto do cômodo */
 .sala-imagem-container {
   width: 100%;
-  max-height: 500px; /* Limita a altura para não empurrar muito os textos */
+  max-height: 500px; 
   margin: 15px 0;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(88, 28, 32, 0.08); /* Sombra sutil usando a cor vinho */
+  box-shadow: 0 4px 12px rgba(88, 28, 32, 0.08); 
   
 }
 
@@ -212,7 +210,7 @@
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover; /* Faz a foto preencher o bloco sem distorcer */
+  object-fit: cover; 
 }
 
 /* ==========================================================================

@@ -2,11 +2,10 @@ import React, { useState, useRef } from 'react';
 import "../styles/PlantaLocal.css"; 
 import imagemPlanta from '../assets/planta.jpeg'; 
 
-// 1. IMPORTAÇÃO DAS IMAGENS DOS CÔMODOS
+
 import imagemAlmoxarifado from '../assets/Almoxarifado.jpeg';
 import imagemRecepcao from '../assets/Recepcao-Espera.jpeg';
 import imagemSalaColetiva from '../assets/Sala-coletiva.jpeg';
-
 import imagemAtendimentoPsicologico from '../assets/atendimento-psicologico.jpeg';
 import imagemEnfermangem from '../assets/enfermagem.jpeg';
 import imagemConsultorioMedico from '../assets/Consultorio-medico.jpeg';
@@ -28,7 +27,7 @@ export default function PlantaLocal() {
       tamanho: "30,00 m²",
       descricao: "Acolhimento inicial, triagem de pacientes e uma área de espera confortável e humanizada.",
       detalhes: "Circulação ampla, acesso principal e banheiros acessíveis integrados.",
-      imagem: imagemRecepcao // substitua por imagemRecepcao quando tiver
+      imagem: imagemRecepcao
     },
     coletiva: {
       titulo: "Sala Coletiva (Consultorias e Oficinas)",
@@ -84,7 +83,7 @@ export default function PlantaLocal() {
       tamanho: "8,00 m²",
       descricao: "Área técnica restrita para o armazenamento seguro e controle de materiais, insumos e estoques da clínica.",
       detalhes: "Prateleiras organizadas e acesso controlado próximo à esterilização.",
-      imagem: imagemAlmoxarifado // 🔥 Imagem mapeada aqui!
+      imagem: imagemAlmoxarifado
     },
     esterilizacao: {
       titulo: "Sala de Esterilização",
@@ -161,7 +160,7 @@ export default function PlantaLocal() {
           
           <hr />
           
-          {/* 3. EXIBIÇÃO DA IMAGEM DO CÔMODO (Aparece dinamicamente se a imagem existir) */}
+          {/* 3. EXIBIÇÃO DA IMAGEM DO CÔMODO */}
           {dadosSalas[salaAtiva].imagem && (
             <div className="sala-imagem-container">
               <img 

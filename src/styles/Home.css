@@ -18,7 +18,7 @@
   background-color: var(--cor-fundo);
   line-height: 1.7;
   width: 100%;
-  overflow-x: hidden; /* Evita qualquer vazamento horizontal acidental */
+  overflow-x: hidden; 
 }
 
 /* Títulos Globais */
@@ -57,17 +57,15 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  position: relative;
-  
+  position: relative;  
   width: 100% !important;
   max-width: 100% !important;
   margin: 0 auto !important;
-  margin-top: 0 !important; /* Mantém colado no topo */
-
-  min-height: 70vh; /* Altura ideal no Desktop para não dar zoom excessivo na foto */
+  margin-top: 0 !important;
+  min-height: 70vh;
   padding: 80px 20px !important; 
   box-sizing: border-box;
-  overflow: hidden; /* Garante que a imagem não vaze para fora do bloco */
+  overflow: hidden;
 }
 
 /* Nova regra para controlar a imagem de fundo real */
@@ -77,9 +75,9 @@
   left: 0;
   width: 100%;
   height: 110%;
-  object-fit: fill; /* Faz a foto preencher o espaço proporcionalmente */
-  object-position: center center; /* Centraliza o foco principal da foto */
-  z-index: 0; /* Fica totalmente atrás */
+  object-fit: fill; 
+  object-position: center center; 
+  z-index: 0; 
 }
 
 .hero-overlay {
@@ -89,12 +87,12 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(135deg, rgba(88, 28, 32, 0.82), rgba(25, 15, 16, 0.78));
-  z-index: 1; /* Fica acima da imagem e abaixo do texto */
+  z-index: 1; 
 }
 
 .hero-content {
   position: relative;
-  z-index: 2; /* Fica no topo de tudo para o texto ficar legível e clicável */
+  z-index: 2; 
   width: 100%;
   max-width: 800px;
 }
@@ -249,7 +247,7 @@
    ---- CAMADAS DE RESPONSIVIDADE (TABLETS E CELULARES) ----
    ========================================================================== */
 
-/* 💻 TABLETS (Telas de até 1024px de largura) */
+/* TABLETS (Telas de até 1024px de largura) */
 @media (max-width: 1024px) {
   .home-container section {
     padding: 60px 20px;
@@ -269,7 +267,7 @@
   }
 }
 
-/* 📱 CELULARES (Telas de até 768px de largura) */
+/* CELULARES (Telas de até 768px de largura) */
 @media (max-width: 768px) {
   .home-container section {
     padding: 50px 20px;
@@ -280,14 +278,14 @@
   }
 
   .home-hero {
-    min-height: 60vh; /* Mantém uma excelente proporção no celular */
+    min-height: 60vh; 
     padding: 50px 15px !important;
     margin-top: 0 !important;
   }
 
   .hero-bg-img {
-    object-fit: fill; /* Preenche a tela do celular sem deixar fundos vazios */
-    object-position: center center; /* Se quiser focar mais no topo da foto, mude para: center top */
+    object-fit: fill;
+    object-position: center center; 
   }
   
   .home-hero h2 {
